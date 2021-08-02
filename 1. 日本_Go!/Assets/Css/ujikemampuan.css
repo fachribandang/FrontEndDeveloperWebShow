@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Montserrat&family=Yomogi&display=swap');
+body{
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #ffffff;
+    background-color:#202020;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+header h1{
+    font-family: 'Cabin Sketch', cursive;
+    background-color: #181818;
+}
+.banner{
+    text-align:center;
+    }
+    .bg-primary{
+        background-color:#202020;
+    }
+.logo{
+    max-width: 100px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 5px grey;
+    transition: 1s;
+}
+.left{
+    text-align: left;
+}
+.back-button{
+    margin: 5px 0px 5px 100px;
+    padding :10px;
+    transition: 1s;
+    border-radius: 10px;
+    background-color: #202020;
+    color: #fff;
+    border-width: 0.1px;
+    border-color: blue;
+}
+.back-button:hover{
+    background-color: #828282;
+    border-color: #828282;
+    color: #202020;
+    -webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+  }
+#quiz{
+    margin:20px 100px 20px 100px;
+}
+  .question{
+    font-weight: 100;
+    text-align: left;
+  }
+  .answers {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  #submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #202020;
+    color: #fff;
+    border-width: 0.1px;
+    border-color: blue;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 1s;
+    margin-bottom:100px;
+  }
+  #submit:hover{
+    background-color: #828282;
+    border-color: #828282;
+    color: white;
+    -webkit-transform: translateX(15px);
+	transform: translateX(15px);
+  }
+  .logo:hover{
+    -webkit-transform: translateY(15px);
+	transform: translateY(15px);
+    background-color: #181818;
+  }

@@ -1,0 +1,639 @@
+/* ----------Common---------- */
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Montserrat&family=Yomogi&display=swap');
+/* Layout */
+html {
+    scroll-behavior: smooth;
+  }
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    font-family: 'Yomogi', cursive;
+    display: inline;
+}
+button{
+    font-family: 'Yomogi', cursive;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Yomogi', cursive;
+    font-weight: bold;
+}
+p,span{
+    font-family: 'Montserrat', sans-serif;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.y-center{
+    align-self: center;
+}
+.x-center{
+    text-align: center;
+}
+.separator-border{
+    border-bottom: solid;
+    border-color: #828282;
+    border-width: 1px;
+}
+/* Color */
+.text-primary{
+    color:#202020;
+}
+.text-secondary{
+    color:#181818;
+}
+.text-light{
+    color:#828282;
+}
+.text-white{
+    color:#ffffff;
+}
+.bg-primary{
+    background-color:#202020;
+}
+.bg-secondary{
+    background-color:#181818;
+}
+.bg-light{
+    background-color:#828282;
+}
+.bg-white{
+    background-color:#ffffff;
+}
+/* Border */
+.border-bottom{
+    border-bottom:solid;
+    border-color: #828282;
+    border-width: 0.01rem;
+}
+/* Icon */
+.icon{
+    max-width: 50px;
+    color: white;
+
+}
+/* ----------Content---------- */
+/* Banner */
+.banner{
+text-align:center;
+}
+.logo{
+    max-width: 100px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 100%;
+    box-shadow: 0px 5px grey;
+    transition: 1s;
+}
+
+.logo:hover{
+    -webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+    background-color: #181818;
+  }
+.Footer-content .logo:hover{
+    -webkit-transform: translateY(-15px);
+	transform: translateY(-15px);
+    box-shadow: 0px 5px #181818;
+    background-color: #828282;
+}
+.banner h1{
+    margin:-1rem;
+    font-weight: bolder;
+    letter-spacing: 1rem;
+}
+/* Navigasi */
+nav {
+    overflow: hidden;
+    background-color:#202020;
+    position: sticky;
+    top: 0;
+    opacity: 0.8;
+}
+.Menu{
+    display: flex;
+}
+.Menu-item{
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 1;
+}
+.Menu img{
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+          to right,
+          #828282,
+          #828282 50%,
+          #ffffff 50%);
+          background-size: 200% 100%;
+          background-position: 100%;
+}
+a:hover {
+    transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+    background-position: 0%;
+}
+
+/* Intro */
+
+.content{
+    margin-top:20px;
+}
+.Intro{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+    border-left: solid;
+    border-right: solid;
+}
+.Intro-content-1{
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Intro-content-1 h2{
+    font-size: 2rem;
+}
+.Intro-content-1 img{
+    align-self:center;
+    padding-left: 50px;
+    max-height: 15rem;
+}
+.Intro-content-2{
+    flex-grow: 1;
+    margin: 5px;
+}
+.Intro-content-desc-1{
+    flex-grow: 1;
+    margin: 5px;
+}
+.Intro-content-desc-2{
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    
+}
+.Intro-content-2 img{
+    max-height: 5rem;
+    box-shadow: 0px 5px #828282;
+}
+.Intro-content-desc-2 >div{
+    flex-grow: 1;
+} 
+/* BahasaJepang */
+.BahasaJepang{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+}
+.BahasaJepang-content-header{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+.BahasaJepang-content-header h2{
+    font-size:2rem;
+    border-style:solid ;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #181818;
+}
+.BahasaJepang-content-header li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.BahasaJepang-content-header img{
+    max-width: 20rem;
+    text-align: center;
+}
+.BahasaJepang-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.BahasaJepang-content-subtitle{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.BahasaJepang-content-desc-wrapper{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+.BahasaJepang-content-desc{
+    flex-grow: 1;
+    min-width: 50%;
+    padding: 1px 1px;
+    margin: 1px 1px;
+    border-style: solid;
+    border-color: #828282;
+    border-radius:0.5rem;
+    border-width: 0.01rem;
+    display: flex;
+    flex-direction: row;
+}
+.BahasaJepang-content-desc h4{
+    background-color: #ffffff;
+    color: #181818;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin:5px;
+}
+/* UjiKemampuan */
+.UjiKemampuan{
+    display: flex;
+    flex-direction: row;
+    width: 90%;   
+    margin: 20px auto;
+    align-items: center;
+}
+.UjiKemampuan-content-header img{   
+    max-height: 5rem;
+}
+.UjiKemampuan-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.UjiKemampuan-content-subtitle{
+    flex-basis: 20%;
+    display: flex;
+    margin:10px;
+    padding:10px;
+    border-width: 0.01rem;
+    border-color: #828282;
+    flex-direction: column;
+}
+.UjiKemampuan-content-subtitle h2{
+    font-size: 1rem;
+}
+.UjiKemampuan-content-desc{
+    flex-basis: 80%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 1px;
+    align-self: center;
+}
+.UjiKemampuan-content-desc-button {
+    flex-basis: 80%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0.2rem;
+    align-self: center;
+}
+
+.UjiKemampuan-content-desc-button button{
+    background-color:#828282;
+    border: none;
+    color: #181818;
+    text-align: center;
+    border-radius: 1px;
+    padding: 1px;
+    font-size: 1rem;
+    margin: 4px 2px;
+    transition: 0.3s;
+}
+.n1 button{
+    background-color: green;
+    color: black;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.n2 button{
+    background-color: red;
+    color: black;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.n3 button{
+    background-color: blue;
+    color: black;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.n4 button{
+    background-color: yellow;
+    color: black;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.n5 button{
+    background-color: orange;
+    color: black;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.UjiKemampuan-content-desc-button button:hover {
+    background-color: #828282;
+    color: white;
+    -webkit-transform: translateY(-15px);
+	transform: translateY(-15px);
+  }
+
+/* AboutMe */
+.AboutMe{
+    display: flex;
+    flex-direction: column;
+    width: 90%;   
+    margin: 20px auto;
+    align-items: center;
+    text-align: center;    
+}
+.AboutMe-content-wrapper{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 90%;  
+}
+.AboutMe img{
+    max-width: 15rem;
+    border-radius: 10px;
+    box-shadow: -3px 3px 2px #aaaaaa;
+    transition: transform 0.5s;
+}
+.AboutMe img:hover {
+    transform: scale(1.1); 
+}
+.AboutMe-content{
+    margin: 1px 10px 1px 10px;
+}
+.AboutMe-content table{
+    text-align: left;
+}
+/* Footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;    
+}
+.Footer-content{
+    width: 90%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;    
+}
+.Footer-content button{
+    background-color: transparent;
+    transition: 0.3s;
+}
+.mini-icon{
+    max-width: 3rem;
+    margin:0px 5px 0px 5px;
+}
+
+.Footer-content button:hover {
+    -webkit-transform: translateY(-15px);
+	transform: translateY(-15px);
+}
+@media only screen and (min-width: 768px) {
+    .Intro-content-1 h2{
+        font-size: 4rem;
+    }
+
+    .Intro-content-2 img{
+        max-height: 10rem;
+        box-shadow: 0px 5px #828282;
+    }
+    .BahasaJepang-content-header img{
+        max-width: 40rem;
+        text-align: center;
+    }
+    .BahasaJepang-content-desc{
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+    .BahasaJepang-content-desc h4{
+        font-size: 5rem;
+        margin:15px;
+    }
+    .UjiKemampuan-content-header img{
+        max-height: 20rem;
+    }
+    .UjiKemampuan-content-desc-button button{
+        background-color:#828282;
+        color: #181818;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 20px;
+        font-size: 5rem;
+    }
+    .n1 button{
+        background-color: green;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+    }
+    .n2 button{
+        background-color: red;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .n3 button{
+        background-color: blue;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+    }
+    .n4 button{
+        background-color: yellow;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+    }
+    .n5 button{
+        background-color: orange;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+    }
+    .AboutMe-content-wrapper{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        width: 90%;   
+        margin: 20px auto;
+    }
+    .AboutMe img{
+        max-width: 20rem;
+        border-radius: 10px;
+        box-shadow: -3px 3px 2px #aaaaaa;
+    }
+    
+    .AboutMe-content{
+        margin: 5px 50px 5px 50px;
+    }
+    .AboutMe-content table{
+        text-align: left;
+    }
+    .mini-icon{
+        max-width: 3rem;
+        margin:0px 50px 0px 50px;
+    }
+    .BahasaJepang-content-header h2{
+        font-size: 4rem;
+    }
+    .UjiKemampuan-content-subtitle h2{
+        font-size: 3rem;
+    }
+}
+
+/* Login Modul */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #181818;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  .Menu-item button{
+    background-color: transparent;
+    color: transparent;
+  }
+  .modal-content button{
+    background-color:#828282;
+    color: #181818;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem; 
+  }

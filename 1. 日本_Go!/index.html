@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>日本_Go!</title>
+    <link rel="stylesheet" href="Assets/Css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="bg-secondary text-white">
+    <header>    
+        <div class="banner bg-primary border-bottom" id="Up">
+            <img class="logo" src="Assets/Image/Logo.png">
+            <h1>日本_Go!</h1>
+            <p>Tempat belajar bahasa jepang online</p>
+            <p>ayo gabung!</p>
+         </div>
+        <nav>
+            <div class="Menu">
+                
+                    <div class="Menu-item left">
+                        <ul>
+                        <li><a href="#Intro">Intro |</a></li>
+                        <li><a href="#BahasaJepang">BahasaJepang |</a></li>
+                        <li><a href="#UjiKemampuan">UjiKemampuan |</a></li>
+                        <li><a href="#AboutMe">About me |</a></li>
+                        </ul>
+                    </div>
+                    <div class="Menu-item right">
+                        <span id="Nama">sdsa</span>
+                        <button onclick="document.getElementById('id01').style.display='block'">
+                            <img class="icon" src="Assets/Icon/ic_profile.png"></button>
+                    </div>
+                
+            </div>
+        </nav>
+        <div id="id01" class="modal">
+            <form class="modal-content animate">
+              <div class="container">
+                  <p class="text-light">Nama</p>
+                  <input type="text" placeholder="Type " id="input_Name">
+                  <button type="button" onclick="login();">Login</button>
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+              </div>
+            </form>
+          </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <article class="Intro" id="Intro">
+                <div class="Intro-content-1">
+                    <div>
+                        <h2><u>Kenapa jepang??</u></h2>
+                    </div>
+                    <div class="y-center">
+                        <img src="Assets/Image/Intro/高齢化社会.png">
+                    </div>
+                </div>
+                
+                <div class="Intro-content-2 more-content">
+                    <div class="Intro-content-desc-1">
+                        <p>Jepang sekarang dalam masa 高齢化(koureika) , yaitu
+                            kondisi dimana populasi orang lansia mencapai 26% 
+                            pada struktur kependuduk dijepang. Hal ini menyebabkan
+                             para kaum muda harus banyak bekerja dan juga sekaligus
+                             mengurus kehidupan orang lansia dan anak-anak.
+                            Oleh karena itu permintaan tenaga kerja melambung tinggi,
+                            namun jikahanya menggunakan tenaga kerja dari jepang saja 
+                            tidak akan cukup memenuhi kebutuhan.Maka dari itu jepang
+                            membuka lowongan kerja untuk para tenaga kerja dari laur
+                            negeri. Selain untuk bekerja, jepang juga menerima para
+                            pelajar luar negeri yang ingin bersekolah di jepang. para
+                            pelajar ini disebut　留学生(Pelajar internasional)
+                        </p>
+                    </div>
+                    <p>Besar kesempatan kita untuk menjadi</p>
+                    <div class="Intro-content-desc-2">
+                        <div>
+                            <h3> Pekerja </h3>
+                            <img class="pekerja"src="Assets/Image/Intro/職業.png">
+                        </div>
+                        <div>
+                            <h3> Pelajar </h3>
+                            <img class="pelajar" src="Assets/Image/Intro/女子留学生.png">
+                            <img class="pelajar" src="Assets/Image/Intro/男子留学生.png">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="BahasaJepang" id="BahasaJepang">
+                <div class="BahasaJepang-content-header">
+                    <h2 class="x-center">Bahasa Jepang</h2>
+                    <span class="x-center"><img src="Assets/Image/B.Jepang/Textbook.png"></span>
+                    <p> <span>日本_Go!</span>membagi tingkat kesulitan bahasa jepang menjadi 3 Bahasa jepang </p>
+                    <ul>
+                        <li>Tingkat Awal / 初級</li>
+                        <li>Tingkat Menengah / 中級</li>
+                        <li>Tingkat Atas / 上級</li>
+                    </ul>
+                </div>
+                <div class="BahasaJepang-content">
+                    <div class="BahasaJepang-content-subtitle">
+                        <h3>Tingkat Awal / 初級</h3>
+                        <p>Pada tingkat ini dibagi menjadi 2 sesi pembelajaran </p>
+                    </div>
+                    <div class="BahasaJepang-content-desc-wrapper">
+                        <div class="BahasaJepang-content-desc">
+                            <h4>ひ</h4>
+                            <p>Merupakan tulisan dasar bahasa jepang, merupakan dasar dari belajar bahasa jepang</p>
+                        </div>
+                        <div class="BahasaJepang-content-desc">
+                            <h4>N5</h4>
+                            <p>Belajar memahami bahasa Jepang dasar sampai batas tertentu,hingga mampu membaca dan memahami kata, 
+                                kalimat, dan kalimat baku yang ditulis dalam hiragana, katakana, dan kanji dasar yang digunakan 
+                                dalam kehidupan sehari-hari.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="BahasaJepang-content">
+                    <div class="BahasaJepang-content-subtitle">
+                        <h3>Tingkat Menengah / 中級</h3>
+                        <p>Pada tingkat ini dibagi menjadi 2 sesi pembelajaran </p>
+                    </div>
+                    <div class="BahasaJepang-content-desc-wrapper">
+                        <div class="BahasaJepang-content-desc">
+                            <h4>N4</h4>
+                            <p>Belajar bahasa Jepang dasar,hingga Mampu membaca dan memahami kalimat topik yang familiar 
+                                dalam kehidupan sehari-hari yang ditulis dengan menggunakan kosakata dasar dan kanji.</p>
+                        </div>
+                        <div class="BahasaJepang-content-desc">
+                            <h4>N3</h4>
+                            <p>Belajar memahami bahasa Jepang yang digunakan dalam situasi sehari-hari sampai batas tertentu,hingga mampu 
+                                membaca dan memahami kalimat yang mengungkapkan konten tertentu yang ditulis tentang topik sehari-hari.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="BahasaJepang-content">
+                    <div class="BahasaJepang-content-subtitle">
+                        <h3>Tingkat Atas / 上級/</h3>
+                        <p>Pada tingkat ini dibagi menjadi 2 sesi pembelajaran </p>
+                    </div>
+                    <div class="BahasaJepang-content-desc-wrapper">
+                        <div class="BahasaJepang-content-desc">
+                            <h4>N2</h4>
+                            <p>Belajar memahami bahasa Jepang yang digunakan dalam situasi sehari-hari dalam situasi yang lebih luas sampai 
+                                batas tertentu, hingga mampu memahami isi tulisan dengan teori yang jelas seperti artikel, surat kabar,  
+                                majalah dan kritik</p>
+                        </div>
+                        <div class="BahasaJepang-content-desc">
+                            <h4>N1</h4>
+                            <p>Belajar memahami bahasa Jepang yang digunakan dalam berbagai situasi,hingga mampu memahami struktur dan 
+                                isi kalimat. tulisan yang dibaca memiliki struktur kalimat yang rumit</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="UjiKemampuan separator-border" id="UjiKemampuan">
+                <div class="UjiKemampuan-content-header">
+                    <img src="Assets/Image/UjiKemampuan/placementtest.png">
+                </div>
+                <div class="UjiKemampuan-content">
+                    <div class="UjiKemampuan-content-subtitle">
+                        <h2 class="x-center">Coba Uji kemampuan bahasa jepang!</h2>
+                    </div>   
+                    <div class="UjiKemampuan-content-desc">
+                        <div class="UjiKemampuan-content-desc-button n1">
+                            <a href="ujikemampuan.html"><button>N1</button></a>
+                        </div>
+                        <div class="UjiKemampuan-content-desc-button n2">
+                            <a href="ujikemampuan.html"><button>N2</button></a>
+                        </div>
+                        <div class="UjiKemampuan-content-desc-button n3">
+                            <a href="ujikemampuan.html"><button>N3</button></a>
+                        </div>
+                        <div class="UjiKemampuan-content-desc-button n4">
+                            <a href="ujikemampuan.html"><button>N4</button></a>
+                        </div>
+                        <div class="UjiKemampuan-content-desc-button n5">
+                            <a href="ujikemampuan.html"><button>N5</button></a>
+                        </div>
+                    </div>         
+                </div>
+
+            </article>
+        </div>
+        <aside>
+            <article class="AboutMe separator-border" id="AboutMe">
+                <div class="AboutMe-content-header">
+                    <h2>About me</h2>
+                </div>
+                <div class="AboutMe-content-wrapper">
+                    <div class="AboutMe-content">
+                        <img src="Assets/Image/AboutMe/Profile.jpg">
+                    </div>
+                    <div class="AboutMe-content">
+                        <h2>Profile</h2>
+                        <table>
+                            <tr>
+                               <th>Nama</th>
+                               <td>Fachri Muhammad Bandang Haq
+                            </td>
+                            </tr>
+                            <tr>
+                               <th>Tempat, Tgl Lahir</th>
+                               <td>Bandung, 10 Maret 1999</td>
+                            </tr>
+                            <tr>
+                               <th>Jenis Kelamin</th>
+                               <td>Laki-Laki</td>
+                            </tr>
+                            <tr>
+                               <th>Agama</th>
+                               <td>Islam</td>
+                        </table>
+                    </div>
+                    <div class="AboutMe-content">
+                        <h2>Pendidikan</h2>
+                        <table>
+                            <tr>
+                               <th>2015</th>
+                               <td>SMAN 1 Rancaekek</td>
+                            </tr>
+                            <tr>
+                               <th>2017</th>
+                               <td>NIPPON bungka gakuin</td>
+                            </tr>
+                            <tr>
+                               <th>2019</th>
+                               <td>POLBAN</td>
+                            </tr>
+                            <tr>
+
+                             </tr>
+                        </table>
+                    </div>
+                </div>  
+            </article>
+        </aside>
+    </main>
+    <footer>
+        <div class="Footer-content">
+            <button onclick="Getfb();"> <img class="mini-icon" src="Assets/Icon/ic_facebook.png"> </button>
+            <button onclick="Getgm();"> <img class="mini-icon" src="Assets/Icon/ic_gmail.png"> </button>
+            <button onclick="Getig();"> <img class="mini-icon" src="Assets/Icon/ic_instagram.png"> </button>
+            <button onclick="Getwa();"> <img class="mini-icon" src="Assets/Icon/ic_whatsapp.png"> </button>
+            <button onclick="Getyt();"> <img class="mini-icon" src="Assets/Icon/ic_youtube.png"> </button> 
+        </div>
+        <div class="Footer-content">
+            <a href="#Up"><img class="logo" src="Assets/Image/Logo.png"></a>
+            <h1>日本_Go!</h1>
+        </div>
+        <p class="bg-secondary text-white"> <u>Belajar Bahasa Jepang &copy; 2021, FachriMuhammadBanadangHaq</u></p>
+    </footer>
+    <script src="Assets/Js/index.js"></script>
+</body>
+</html>
+
