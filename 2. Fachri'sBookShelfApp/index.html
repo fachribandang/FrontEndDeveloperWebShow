@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fachri's Bookshelf Apps</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cs/index.css">
+    </head>
+    <body>
+        <header class="text-white">
+            <nav class="bg-primary">
+                <h1 class="tittle"> Fachri's Bookshelf Apps </h1>
+            </nav>
+            <div class="banner bg-gray ">
+                <div class="row">
+                    <div class="col-6 y-center px-l">
+                        <h2><u>Bookshelf</u></h2>
+                        <p>Aplikasi untuk managemen kegiatan baca buku. terdapat dua rak buku untuk mengatur buku sudah 
+                            dibaca dan belum dibaca.
+                            Kita dapat menambahkan, memindahkan, dan menghapus  buku. 
+                        </p>
+                    </div>
+                    <div class="col-6 y-center x-center px-l">
+                            <img src="assets/image/school_toshokan_hondana.png" alt="Logo">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="aplikasi my-l text-white">
+        <!-- Input Buku -->
+            <section class="container row my-m">
+                <div class="col-2">
+
+                </div>
+                <div class="panelInputBook bg-gray col-8 border-radius-l pm shadow" >
+                    <div>
+                        <h2 class="py-l x-center">Input Buku Baru</h2>
+                    </div>
+                    <div>
+                        <form class="inputBook" id="inputBook">
+                            <!-- Judul -->
+                            <div class="input row py-m">
+                                <div class="col-3">
+                                    <label for="inputBookTitle">Judul</label>
+                                </div>
+                                <div class="col-9">
+                                    <input class="width-max py-s" id="inputBookTitle" type="text" required>   
+                                </div>
+                            </div>
+                            <!-- Penulis -->
+                            <div class="input row py-m">
+                                <div class="col-3">
+                                    <label for="inputBookAuthor">Penulis</label>
+                                </div>
+                                <div class="col-9">
+                                    <input class="width-max py-s" id="inputBookAuthor" type="text" required>   
+                                </div>
+                            </div>  
+                            <!-- Tahun -->
+                            <div class="input row py-m">
+                                <div class="col-3">
+                                    <label for="inputBookYear">Tahun</label>
+                                </div>
+                                <div class="col-9">
+                                    <input class="width-max py-s" id="inputBookYear" type="number" required>  
+                                </div>
+                            </div>
+                            <!-- checkbox -->
+                            <div class="input row">
+                                <div class="checkbox">
+                                    <label for="inputBookIsReaded">Selesai dibaca</label>
+                                    <input class="mx-l" id="inputBookIsReaded" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button class="button" id="bookSubmit" type="submit" value="Submit" name="Submit" >
+                                    <img src="assets\icon\2x\outline_add_circle_outline_black_24dp.png">
+                                    <span>submit</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-2">
+                </div>
+
+            </section class="container row">
+
+            <section>
+            <!-- Filter -->
+            <div class="bg-gray">
+                <!-- form wrapper -->
+                <div class="row">
+                    <div  class="col-3"></div>
+                    <div  class="col-6">
+                        <form id="formFilter">
+                            <label for="filterSelector">filter : </label>
+                            <select name="filter" id="filterSelector" onchange="applyFilter();">
+                                <option value="title">judul</option>
+                                <option value="author">penulis</option>
+                                <option value="year">tahun</option>
+                            </select>
+                            <label for="filterKey"></label>
+                            <input type="text" id="filterKey" style="width: 100%;" onkeyup="applyFilter();"> 
+                        </form>
+                    </div>
+                    <div  class="col-3"></div>
+                </div>
+            </div>
+            </section>
+        <!-- Rak buku -->
+            <section class="container my-m">
+                <!-- wrapper -->
+                <div class="row mobile">
+                <!-- Rak buku belum baca-->
+                    <div class="panelBookShelf col-6 row ml" >
+                        <input id="idReaded" value="false" style="display: none;" ></input>
+                        <div class="col-12 bg-gray border-radius-l pm shadow mx-l " id="unreadedBookShelfList">
+                            <div class="col-12 x-center">
+                                <div class="panelHeader ps">
+                                    <h2 class="border-radius-l bg-primary"><u>Rak buku belum baca</u></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 
+                            NewBook
+                        -->
+                    </div>
+
+                <!-- Rak buku sudah baca -->
+                    <div class="panelBookShelf col-6 row ml">
+                        <input id="idReaded" value="true" style="display: none;" ></input>
+                        <div class="col-12 bg-gray border-radius-l pm shadow mx-l " id="readedBookShelfList">
+                            <div class="col-12 x-center">
+                                <div class="panelHeader ps">
+                                    <h2 class="border-radius-l bg-primary"><u>Rak buku sudah baca</u></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 
+                            NewBook
+                        -->
+                    </div>
+                    
+                </div>
+                <!-- wrapper -->
+            </section>
+        <div class="modal shadow">
+            <div class="modal-content bg-primary">
+                <span class="close-button bg-sky">&times;</span>
+                <h3>Book Editor </h3>
+                <form id="formBookEditor">
+                    <div class="input row py-m">
+                        <div class="col-3">
+                            <label for="editBookTitle">Judul</label>
+                        </div>
+                        <div class="col-9 editBookTitlePanel">
+                            <!-- <input class="width-max py-s" id="editBookTitle" type="text" required>    -->
+                        </div>
+                    </div>
+                    <div class="input row py-m">
+                        <div class="col-3">
+                            <label for="editBookAuthor">Penulis</label>
+                        </div>
+                        <div class="col-9 editBookAuthorPanel">
+                            <!-- <input class="width-max py-s" id="editBookAuthor" type="text" required>    -->
+                        </div>
+                    </div>
+                    <div class="input row py-m ">
+                        <div class="col-3">
+                            <label for="editBookYear">Tahun</label>
+                        </div>
+                        <div class="col-9 editBookYearPanel">
+                            <!-- <input class="width-max py-s" id="editBookYear" type="text" required>    -->
+                        </div>
+                    </div>
+                    <input class="width-max py-s" id="editBookid" type="text" style="display: none;">   
+                    <div class="right">
+                        <button class="button" id="editBookSubmit" type="submit" value="Submit" name="Submit" >
+                            <img src="assets/icon/2x/outline_edit_black_24dp.png">
+                            <span>Edit</span>
+                        </button>
+                    </div>  
+                </form>
+                
+            </div>
+        </div>
+        </main>
+        <footer class="bg-primary text-white x-center">
+            <span> <u>&copy;Fachri.muhammad.tif419@polban.ac.id_2021</u></span>
+        </footer>
+        <script src="js/data.js" type="text/javascript"></script>
+        <script src="js/dom.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+    </body>
+</html>
