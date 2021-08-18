@@ -4,4 +4,4 @@
 * [BookShelfApp](https://fachribandang.github.io/FrontEndDeveloperWebShow/2.%20Fachri'sBookShelfApp/index.html)
 * [HkAni(AnimeList)](https://fachribandang.github.io/FrontEndDeveloperWebShow/3.%20HkAni/dist/index.html) 
 * Latihan responsive website
-** [HkAni(AnimeList)](https://fachribandang.github.io/FrontEndDeveloperWebShow/4.%20RespnosiveWebSample/RestCat/dist/index.html)
+    [RestCat](https://fachribandang.github.io/FrontEndDeveloperWebShow/4.%20RespnosiveWebSample/RestCat/dist/index.html)
