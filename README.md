@@ -7,6 +7,6 @@
     * [RestCat](https://fachribandang.github.io/FrontEndDeveloperWebShow/4.%20RespnosiveWebSample/RestCat/dist/index.html)
 ## waktu pembuatan
 * nihongo 2021/07/31
-* nihongo 2021/08/05
-* nihongo 2021/08/15
-* nihongo 2021/08/18
+* bookshelf app 2021/08/05
+* anime list 2021/08/15
+* katalog restoran 2021/08/18
