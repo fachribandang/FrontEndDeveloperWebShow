@@ -5,8 +5,11 @@
 * [HkAni(AnimeList)](https://fachribandang.github.io/FrontEndDeveloperWebShow/3.%20HkAni/dist/index.html) 
 * Latihan responsive website
     * [RestCat](https://fachribandang.github.io/FrontEndDeveloperWebShow/4.%20RespnosiveWebSample/RestCat/dist/index.html)
+* [CloneVIK](https://fachribandang.github.io/FrontEndDeveloperWebShow/5.%Cloning_VIKRevolusiMentalKorea/cloning/index.html)
+
 ## waktu pembuatan
 * nihongo 2021/07/31
 * bookshelf app 2021/08/05
 * anime list 2021/08/15
 * katalog restoran 2021/08/18
+* Cloning VIK 2022/03/11
