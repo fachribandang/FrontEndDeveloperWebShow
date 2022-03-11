@@ -5,7 +5,7 @@
 * [HkAni(AnimeList)](https://fachribandang.github.io/FrontEndDeveloperWebShow/3.%20HkAni/dist/index.html) 
 * Latihan responsive website
     * [RestCat](https://fachribandang.github.io/FrontEndDeveloperWebShow/4.%20RespnosiveWebSample/RestCat/dist/index.html)
-* [CloneVIK](https://fachribandang.github.io/FrontEndDeveloperWebShow/5.%Cloning_VIKRevolusiMentalKorea/cloning/index.html)
+* [CloneVIK](https://fachribandang.github.io/FrontEndDeveloperWebShow/5. Cloning_VIKRevolusiMentalKorea/cloning/index.html)
 
 ## waktu pembuatan
 * nihongo 2021/07/31
