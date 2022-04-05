@@ -6,6 +6,7 @@
 * Latihan responsive website
     * [RestCat](https://fachribandang.github.io/FrontEndDeveloperWebShow/4.%20RespnosiveWebSample/RestCat/dist/index.html)
 * [CloneVIK](https://fachribandang.github.io/FrontEndDeveloperWebShow/5.%20Cloning_VIKRevolusiMentalKorea/cloning/index.html)
+* [VI-geosite](https://fachribandang.github.io/FrontEndDeveloperWebShow/6.%20VI_Geonesia_Ciletuh/index.html)
 
 ## waktu pembuatan
 * nihongo 2021/07/31
