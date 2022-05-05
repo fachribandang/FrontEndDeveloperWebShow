@@ -27,6 +27,16 @@ body::-webkit-scrollbar {
     display: none;
 }
 /* common rule for every section */
+.content-section{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.section-container{
+    height: 100%;
+    width: 100%;
+    right: 0;
+}
 .section-description{
     padding-left: 10px;
     color: #ffffff;
@@ -141,7 +151,6 @@ body::-webkit-scrollbar {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 /* description */
-
 /* image show */
 .showcase-image {
     width: 100%;
@@ -209,7 +218,7 @@ body::-webkit-scrollbar {
     width: 100%;
     position: fixed;
 }
-.section-1-container{
+.section-2-container{
     height: 100%;
     width: 100%;
     right: 0;
@@ -232,4 +241,39 @@ body::-webkit-scrollbar {
     position: absolute;
     bottom: 0;
     opacity: 0;
+}
+/* --------- section 3 --------- */
+
+/* --------- section 4 --------- */
+.girimukti{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.girimukti-man{
+    left: 42%;
+    width: 30%; 
+    position: absolute;
+    bottom: 10%;
+    opacity: 0;
+}
+/* --------- section 5 --------- */
+.pantai-cikeueus{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.pantai-cikeueus-image{
+    border: solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.pantai-cikeueus-show h3{
+    color: #ffffff;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #000000;
 }
