@@ -1,0 +1,16 @@
+div{
+    position: absolute;
+    height: 132px;
+    width: 75px; 
+    background-image:url(
+  "https://www.caveofprogramming.com/images/capguy-walk.png"); 
+    background-position: 
+  }
+  
+  button{
+    margin-top: 150px; 
+  }
+  
+  .facing-left{
+    transform: scaleX(-1); 
+  }

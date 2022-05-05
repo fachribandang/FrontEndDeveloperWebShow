@@ -1,0 +1,235 @@
+/* Nature color pallate
+Primary         : rgb(54, 98, 43)
+Secondary       : rgb(114, 157, 57)
+light           : rgb(198, 227, 119)
+secondary light : rgb(251, 250, 211)  */
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=PT+Serif&family=Pacifico&family=Rubik+Microbe&family=Rubik+Puddles&display=swap');
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    height: 100%;
+    background-color:rgb(54, 98, 43);
+    font-family: Sans-Serif;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    display: flex;
+}
+body div{
+    /* border:solid black; */
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+/* common rule for every section */
+.section-description{
+    padding-left: 10px;
+    color: #ffffff;
+    position: absolute;
+}
+.description-title{
+    color: #ffffff;
+    font-size: 60px;
+    text-shadow: 2px 2px 5px #000000;
+    text-decoration: underline;
+}
+/* --------- walk guy --------- */
+.walk-guy-container{
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.walk-guy{
+    bottom: 0;
+    padding-top: 132px;
+    width: 75px; 
+    background-image:url("assets/capguy-walk.png"); 
+    background-position:0;
+    position: absolute;
+    z-index: 1;
+}
+.facing-left{
+    transform: scaleX(-1); 
+}   
+.walk-guy-shadow{
+    bottom: 110px;
+    transform: translateY(118px);
+    position: absolute;
+    z-index: 1;
+}
+.walk-guy-background{
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    background-position:0;
+    background-image: url(assets/beach-background-mini.png);
+    background-size: cover;
+    opacity:0;
+}
+.content{
+    height: 200px;
+}
+/* --------- Opening --------- */
+.page-title{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.page-title-background{
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/geological.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page-title-text h1{
+    text-transform: uppercase;
+    font-family: 'Rubik Microbe', cursive;
+    font-size: 120px;
+}
+.page-title-text{
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+    letter-spacing: 5px;
+    background-color:rgb(124, 131, 253, 0.6);
+    top: 30%;
+    left: 0;
+} 
+/* --------- section 1 --------- */
+/* section 1 common rule */
+.section-1{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.section-1-container{
+    float: right;
+    height: 100%;
+    width: 100%;
+    right: 0;
+}
+.map-ciletuh{
+    position: absolute;
+    width: 900px;
+    right: 0;
+}
+.map-icon{
+    width: 30px;
+}
+.map-text {
+    font-size: 25x;
+    color: #ffffff;
+    background-color: rgba(21, 254, 0, 0);
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+/* description */
+
+/* image show */
+.showcase-image {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.showcase-description{
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    padding: 20px 0 20px 0;
+    background-image: linear-gradient(to right, rgba(21, 254, 0, 0.5) , rgba(21, 254, 0, 0) , rgba(21, 254, 0, 0));
+}
+/* cikalapa position */
+.cikalapa-icon{
+    position: absolute;
+    right: 405px;
+    top: 265px;
+}
+.cikalapa-desc{
+    position: absolute;
+    right: 440px;
+    top: 270px;
+}
+/* puncak darma position */
+.puncak-darma-icon{
+    position: absolute;
+    right: 395px;
+    top: 275px;
+}
+.puncak-darma-desc{
+    position: absolute;
+    right: 430px;
+    top: 290px;
+}
+/* puncak tugu position */
+.puncak-tugu-icon{
+    position: absolute;
+    right: 365px;
+    top: 300px;
+}
+.puncak-tugu-desc{
+    position: absolute;
+    right: 400px;
+    top: 310px;
+}
+/* puncak panejoan position */
+.panenjoan-icon{
+    position: absolute;
+    right: 360px;
+    top: 335px;
+}
+.panenjoan-desc{
+    position: absolute;
+    right: 390px;
+    top: 345px;
+}
+/* --------- section 2 --------- */
+.section-2{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.section-1-container{
+    height: 100%;
+    width: 100%;
+    right: 0;
+}
+.pamyoanan-plato{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.uphill-background{
+    left: 10%;
+    width: 50%; 
+    position: absolute;
+    bottom: 0;
+}
+.uphill-man{
+    left: 10%;
+    width: 50%; 
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+}

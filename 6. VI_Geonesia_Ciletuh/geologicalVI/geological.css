@@ -1,0 +1,202 @@
+/* Nature color pallate
+Primary         : rgb(54, 98, 43)
+Secondary       : rgb(114, 157, 57)
+light           : rgb(198, 227, 119)
+secondary light : rgb(251, 250, 211)  */
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=PT+Serif&family=Pacifico&family=Rubik+Microbe&family=Rubik+Puddles&display=swap');
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    height: 100%;
+    background-color:rgb(54, 98, 43);
+    font-family: Sans-Serif;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+/* walk guy */
+.walk-guy-container{
+    position: fixed;
+    bottom: 150px;
+    z-index: 1;
+}
+.walk-guy{
+    padding-top: 132px;
+    width: 75px; 
+    background-image:url("assets/capguy-walk.png"); 
+    background-position:0;
+    position: absolute;
+}
+.walk-guy-shadow{
+    transform: translateY(118px);
+    position: absolute;
+}
+.facing-left{
+    transform: scaleX(-1); 
+}
+/* Opening */
+.page-title{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.page-title-background{
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/geological.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page-title-text h2{
+    font-family: 'Rubik Microbe', cursive;
+}
+.page-title-text{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    /* top: 50%; */
+    padding: 10px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    background-color:rgb(124, 131, 253, 0.6)
+}
+/* common */
+/* section 1 */
+.section-1{
+ position: fixed;
+}
+.section-1-1-image{
+    height: 100%;
+    position: absolute;
+    right:0;
+    top:0;
+} 
+.section-1-1-text{
+    font-size: 20px;
+    position: relative;
+    margin: 20% 0px 0px 0%;
+    border-radius: 20px;
+    border:solid 1px;
+    padding: 10px;
+    background-color: rgb(54, 98, 43, 0.9);
+    color:white;
+    width: 40%;
+}
+/* .section-1-2{
+    background-image: url("assets/section-1/amfiteater-ciletuh.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+/* .section-1-2-image{
+    position: absolute;
+    right:0;
+    top:0;
+}  */
+.section-1-2-text{
+    font-size: 20px;
+    position: relative;
+    margin: 30% 0px 0px 0%;
+    border-radius: 20px;
+    border:solid 1px;
+    padding: 10px;
+    background-color: rgb(54, 98, 43, 0.9);
+    color:white;
+    width: 40%;
+}
+
+
+.section-1-3{
+    position: fixed;
+    float:right;
+}
+.section-1-3-image{
+    /* height: 100%; */
+} 
+/* route map image set */
+.section-1-3-image-map{
+    height: 500px;
+    width: 630px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+/* cikalapa D*/
+.section-1-3-image-icon-1{
+    height: 20px;
+
+    right: 285px;
+    top:202px;
+}
+/* puncak darma D*/
+.section-1-3-image-icon-2{
+    height: 20px;
+
+    right: 278px;
+    top:210px;
+}
+/* puncak tugu D*/
+.section-1-3-image-icon-3{
+    height: 20px;
+
+    right: 255px;
+    top:225px;
+}
+/* panenjoan D*/
+.section-1-3-image-icon-4{
+    height: 20px;
+    /* position: relative; */
+    right: 248px;
+    top:260px;
+}
+
+.section-1-3-text{
+
+}
+.map-ciletuh{
+    background-image: url("assets/section-1/map-ciletuh.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1136px;
+    height: 834px;
+}
+
+.section-1-3-image{
+} 
+.section-1-3-text-image-1{
+}
+.section-1-3-text{
+
+}
+
+/* div{
+    position: absolute;
+    height: 132px;
+    width: 75px; 
+    background-image:url(
+  "https://www.caveofprogramming.com/images/capguy-walk.png"); 
+    background-position: 0;
+  }
+  
+  button{
+    margin-top: 150px; 
+  }
+  
+  .facing-left{
+    transform: scaleX(-1); 
+  } */

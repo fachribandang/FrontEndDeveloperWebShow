@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="skrollr skrollr-desktop" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VI-Geopark Ciletuh</title>
+    <link rel="icon" type="image/x-icon" href="assets\images\ciletuh-logo.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<!-- STYLE / CSS -->
+<!-- 
+                  COLOR SETUP
+https://colorhunt.co/palette/7c83fd96baff7dedff88fff7
+Sea color palette
+Primary         : rgb(124, 131, 253)
+Secondary       : rgb(150, 186, 255)
+light           : rgb(125, 237, 255)
+secondary light : rgb(136, 255, 247)
+https://colorhunt.co/palette/fbfad3c6e377729d3936622b
+Nature color pallate
+Primary         : rgb(54, 98, 43)
+Secondary       : rgb(114, 157, 57)
+light           : rgb(198, 227, 119)
+secondary light : rgb(251, 250, 211) 
+https://colorhunt.co/palette/ff4646ff8585ffb396fff5c0
+Culture color pallate
+Primary         : rgb(255, 70, 70)
+Secondary       : rgb(255, 133, 133)
+light           : rgb(255, 179, 150)
+secondary light : rgb(255, 245, 192)
+-->
+<!-- 
+                  FONT SETUP
+    font-family: 'Averia Serif Libre', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'PT Serif', serif;
+    font-family: 'Rubik Microbe', cursive;
+    font-family: 'Rubik Puddles', cursive;
+
+    @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=PT+Serif&family=Pacifico&family=Rubik+Microbe&family=Rubik+Puddles&display=swap');
+-->
+
+<style>    
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=PT+Serif&family=Pacifico&family=Rubik+Microbe&family=Rubik+Puddles&display=swap');
+/* Color palette */
+    /* Sea */
+.sea-primary{
+    background-color:rgb(124, 131, 253);
+}
+.sea-secondary{
+    background-color:rgb(150, 186, 255)
+}
+.sea-light{
+    background-color:rgb(125, 237, 255)
+}
+.sea-secondary-light{
+    background-color:rgb(136, 255, 247)
+}
+.sea-transparant {
+    background-color:rgb(124, 131, 253, 0.6)
+}
+    /* Nature */
+.nature-primary{
+    background-color:rgb(54, 98, 43)
+}
+.nature-secondary{
+    background-color:rgb(114, 157, 57)
+}
+.nature-light{
+    background-color:rgb(198, 227, 119)
+}
+.nature-secondary-light{
+    background-color:rgb(251, 250, 211)
+}
+.nature-transparant {
+    background-color:rgb(54, 98, 43, 0.6)
+}
+    /* Culture */
+.culture-primary{
+    background-color:rgb(255, 70, 70)
+}
+.culture-secondary{
+    background-color:rgb(255, 133, 133)
+}
+.culture-light{
+    background-color:rgb(255, 179, 150)
+}
+.culture-secondary-light{
+    background-color:rgb(255, 245, 192)
+}
+.culture-transparant {
+    background-color:rgb(255, 70, 70, 0.6)
+}
+    /* Text color */
+.text-white{
+    color: white;
+}
+.text-black{
+    color: black;
+}
+.text-secondary{
+    color: gray;
+}
+/* Common style */
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-height: 1500px;
+}
+section{
+    height: 100vh;
+}
+/* div{
+    border:solid;
+} */
+/* landing-page */
+.landing-page{
+    background-color: rgb(8, 7, 7);
+}
+.landing-page-container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.landing-page img{
+    width: 65%;
+}
+#foglayer_01 .image01, #foglayer_01 .image02 {
+  background: url("assets/images/landing-page/fog1.png") center center/cover no-repeat transparent;
+  z-index: -1;
+}
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02{
+  background: url("assets/images/landing-page/fog2.png") center center/cover no-repeat transparent;
+  z-index: -1;
+}
+/* https://codepen.io/braedencraig/pen/dBVKzO */
+/* ---------- Fog ---------- */
+.fogwrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+}
+#foglayer_01, #foglayer_02, #foglayer_03 {
+  height: 100%;
+  position: absolute;
+  width: 200%;
+}
+#foglayer_01 .image01, #foglayer_01 .image02,
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02 {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+#foglayer_01 {
+  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+}
+#foglayer_02, #foglayer_03 {
+  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+}
+/* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@-moz-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@-o-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .28; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+/* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-moz-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-o-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+/* ---------- Keyframe Layer 3 ---------- */
+@-webkit-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-o-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@keyframes foglayer_03_opacity {
+  0% { opacity: .8; }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+/* ---------- Keyframe moveMe ---------- */
+@-webkit-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-moz-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-o-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+/* selection-page */
+
+.selection-page {
+    display: flex;
+}
+.selection-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.selection-page div{
+    cursor: pointer;
+    height: 100%;
+    background-image: url("assets/images/selection-page/geological.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+.selection-page .geological{
+    background-image: url("assets/images/selection-page/geological.jpg");
+}
+.selection-page .biological{
+    background-image: url("assets/images/selection-page/biological.jpeg");
+}
+.selection-page .cultural{
+    background-image: url("assets/images/selection-page/cultural.jpg");
+}
+.selection-page h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-family: 'Rubik Microbe', cursive;
+}
+.selection-page .geological:hover,.selection-page .cultural:hover,.selection-page .biological:hover{
+    transform: scale(1.2);
+}
+.selection-page .geological:hover + h2,.selection-page .cultural:hover + h2,.selection-page .biological:hover + h2{
+    text-decoration: underline;
+}
+.selection-page .geological + h2:hover,.selection-page .cultural + h2:hover,.selection-page .biological + h2:hover{
+    text-decoration: underline;
+}
+</style>
+<!-- STYLE / CSS -->
+
+<body class="">
+    <!-- landing page -->
+    <section class="landing-page">
+        <div class="landing-page-container">
+            <div    
+            class="skrollable" 
+            data-0="transform:translate(0,0%);" 
+            data-200="transform:translate(0,20%);" 
+            data-1000="transform:translate(0,-100%);" 
+            style="transform: translate(0px);">
+                <img src="assets/images/landing-page/banner.png">
+            </div>
+            <div id="foglayer_01" class="fog">
+                <div class="image01"></div>
+                <div class="image02"></div>
+              </div>
+              <div id="foglayer_02" class="fog">
+                <div class="image01"></div>
+                <div class="image02"></div>
+              </div>
+              <div id="foglayer_03" class="fog">
+                <div class="image01"></div>
+                <div class="image02"></div>
+              </div>
+        </div>
+    </section>
+    <!-- landing page -->
+    
+    <!-- selection page -->
+    <section class="selection-page">
+        <div class="selection-container">
+            <a href="geological.html">
+                <div class="geological"></div>
+                <h2 class="nature-transparant">Geological </h2>
+            </a>
+        </div>
+        <div class="selection-container">
+            <div class="biological"></div>
+            <h2 class="sea-transparant"> Biological </h2>
+        </div>
+        <div class="selection-container">
+            <div class="cultural"></div>
+            <h2 class="culture-transparant "> Cultural </h2>
+        </div>
+        <!-- <div>
+            <h2> Biological </h2>
+        </div>
+        <div>
+            <h2> Cultural </h2>
+        </div> -->
+    </section>
+    <!-- selection page -->
+
+    <script src="https://cdnout.com/skrollr"></script>
+    <!-- SCRIPT / JS -->
+    <script type="text/javascript">
+        const s = skrollr.init();
+    </script>
+    <!-- SCRIPT / JS -->
+
+</body>
+
+</html>
