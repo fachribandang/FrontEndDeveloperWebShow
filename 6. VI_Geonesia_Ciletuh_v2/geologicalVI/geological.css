@@ -3,6 +3,11 @@ Primary         : rgb(54, 98, 43)
 Secondary       : rgb(114, 157, 57)
 light           : rgb(198, 227, 119)
 secondary light : rgb(251, 250, 211)  */
+/* Sea color palette
+Primary         : rgb(124, 131, 253)
+Secondary       : rgb(150, 186, 255)
+light           : rgb(125, 237, 255)
+secondary light : rgb(136, 255, 247) */
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=PT+Serif&family=Pacifico&family=Rubik+Microbe&family=Rubik+Puddles&display=swap');
 html{
     margin: 0;
@@ -64,6 +69,7 @@ body::-webkit-scrollbar {
     background-position:0;
     position: absolute;
     z-index: 1;
+    opacity:0;
 }
 .facing-left{
     transform: scaleX(-1); 
@@ -73,6 +79,7 @@ body::-webkit-scrollbar {
     transform: translateY(118px);
     position: absolute;
     z-index: 1;
+    opacity:0;
 }
 .walk-guy-background{
     bottom: 0;

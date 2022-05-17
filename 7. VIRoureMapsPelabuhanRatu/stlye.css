@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root{
+    --navyblue: rgb(20,14,70,1);
+    --navyblue-secondary: rgb(20,14,70,0.75);
+    --overlay-white: rgba(255,255,255,0.75);
+}
+/* common rule */
+html, body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--navyblue);
+};
+body {
+    height: 100%;
+    width: 100%;
+}
+    /* for section */
+section{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.test{
+    border: solid black;
+}
+/* --------- Opening --------- */
+.page-title{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.page-title-background{
+    height: 100%;
+    width: 100%;
+    /* background-image: url(assets/geological.jpg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page-title-background img{
+    position: absolute;
+}
+.page-title-background img.sky{
+    height: 100%;
+    width: 100%;
+}
+.page-title-background img.ground{
+    width: 100%;
+    bottom:0;
+}
+.page-title-background img.ground-water{
+    width: 100%;
+    bottom:10px;
+    left:20px;
+    animation: move-down-up-water-1 2s ease infinite;
+}
+.page-title-background img.ground-water-2{
+    width: 100%;
+    bottom:0px;
+    left:0px;
+}
+.page-title-background img.ground-water-3{
+    width: 100%;
+    bottom:10px;
+    left:20px;
+    animation: move-down-up-water-2 2s ease infinite;
+    animation-delay: 0.25s;
+}
+.page-title-background img.sea{
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    animation: sea-move 6s ease infinite;
+    animation-delay: 0.25s;
+}
+.page-title-background img.bird-all{
+    width: 100%;
+    bottom: 20%;
+    left: 0%;
+    animation: all-bird-fly 3s ease infinite;
+    animation-delay: 0.25s;
+}
+.page-title-background .bird-container{
+    position: absolute;
+    bottom: 70%;
+    left: 80%;
+    height:40px;
+    width:60px;
+    animation: bird-fly 4s ease infinite;
+}
+.page-title-background .bird-container img{
+    height: 100%;
+    width: 100%;
+}
+.page-title-background img.stone{
+    width: 100%;
+    bottom:0px;
+    left:0px;
+}
+.page-title-background img.cloud-1{
+    top:0px;
+    left:0px;
+    animation: cloud-move 120s ease infinite;
+}
+.page-title-background img.cloud-2{
+    top:0px;
+    left:20%;
+    animation: cloud-move 30s ease infinite;
+}
+.page-title-background img.cloud-3{
+    top:0px;
+    left:60%;
+    animation: cloud-move 60s ease infinite;
+}
+.page-title-background img.cloud-12{
+    top:0px;
+    left:20%;
+    scale: 0.2;
+    animation: cloud-move 60s ease infinite;
+}
+.page-title-background img.cloud-32{
+    top:0px;
+    left:60%;
+    scale: 0.5;
+    animation: cloud-move 80s ease infinite;
+}
+
+    /* text */
+.page-title-text h1{
+    text-transform: uppercase;
+    font-size: 64px;
+}
+.page-title-text{
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+    letter-spacing: 5px;
+    background-color:var(--overlay-white);
+    top: 30%;
+    left: 0;
+} 
+.scroll-icon{
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    animation: scroll-move 2s ease infinite;
+}
+.scroll-icon p{
+    padding:0;
+    margin:0;
+}
+.scroll-icon img{
+    width: 50px;
+}
+
+
+    /* animation opening */
+    @keyframes scroll-move {
+        0% {
+            bottom:-150px;
+        }
+        35% {
+            bottom:-130px;
+        }
+        100% {
+            bottom:-150px;
+        }
+      }
+    @keyframes sea-move {
+        0% {
+            bottom:5px;
+        }
+        50% {
+            bottom:0px;
+        }
+        100% {
+            bottom:5px;
+        }
+      }
+    @keyframes move-down-up-water-1 {
+        0% {
+            bottom:0px;
+            left:20px;
+        }
+        50% {
+            bottom:-10px;
+            left:0px;
+        }
+        100% {
+            bottom:0px;
+            left:20px;
+        }
+      }
+      @keyframes move-down-up-water-2 {
+          0% {
+              bottom:10px;
+              left:20px;
+          }
+          50% {
+              bottom:0px;
+              left:0px;
+          }
+          100% {
+              bottom:10px;
+              left:20px;
+          }
+        }
+        
+    @keyframes all-bird-fly {
+        0% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+        }
+        50% {
+            margin-bottom:20px;
+        }
+        100% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+        }
+    }
+    @keyframes bird-fly {
+        0% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+            width:60px;
+            height:40px;
+        }
+        50% {
+            margin-bottom:20px;
+            width:50px;
+        }
+        100% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+            width:60px;
+            height:40px;
+        }
+      }
+      @keyframes cloud-move {
+        0% {
+            left: -100%;
+            opacity:1;
+        }
+        75% {
+            opacity:1;
+        }
+        100% {
+            left:  100%;
+            opacity:0;
+        }
+      }
+/* section 1 */
+.transition{
+    position: absolute;
+    width: 100%;
+}
+.transition img{
+    width: 100%;
+}
+section.s1{
+    display: flex;
+    justify-content: center;
+    background-image: url('assets/2D/beach 2/sky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    /* map */
+section.s1 .map-wrapper{
+    position: absolute;
+    width: 800px;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
+}
+section.s1 .map-wrapper .map{
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
+}
+    /* content */
+section.s1 .content-wrapper{
+    position: absolute;
+    text-align: center;
+    top:50%;
+    width: 500px;
+}
+section.s1 .content-wrapper img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
+}
+
+.map-pos img{
+    width: 30px;
+    border-radius: 30px;
+}
+section.s1 span{
+    font-size: 25x;
+    text-transform: capitalize;	
+    text-decoration: underline;
+    color: #ffffff;
+    background-color: rgba(21, 254, 0, 0);
+    text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+}
+.map-pos{
+    z-index: 1;
+    position:absolute;
+} 
+/* position */
+/* right: 330px;
+top: 210px;
+
+right: 280px;
+top: 180px; */
+.map-pos.puncak-cibuti{
+    right: 420px;
+    top: 190px;
+}
+.map-pos.puncak-darma{
+    right: 450px;
+    top: 170px;
+}
+.map-pos.karang-deau{
+    right: 580px;
+    top: 120px;
+}
+.map-pos.pantai-cikeueus{
+    right: 430px;
+    top: 100px;
+}
+.map-pos.pantai-cikalapa{
+    right: 520px;
+    top: 70px;
+}
+.map-pos.batu-catur{
+    right: 450px;
+    top: 90px;
+}
+.map-pos.curug-mawur{
+    right: 260px;
+    top: 170px;
+}
+.map-pos.curug-larangan{
+    right: 280px;
+    top: 200px;
+}
+
