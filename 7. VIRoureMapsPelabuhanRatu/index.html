@@ -8,10 +8,9 @@
 	<link rel="stylesheet" href="stlye.css">
 </head>
 
-<body class="skrollable">
+<body>
 	<!-- page title -->
-	<section 
-		class="page-title skrollable"
+	<section class="page-title"
 		data-500="bottom:0%;display:block;"
 		data-2000="bottom:-100%;display:none;"
 		>
@@ -46,25 +45,49 @@
 		
 	</section>
 	<!-- section 1 -->
-	<section style="display: none;"class="s1 skrollable"
+	<section class="s1"
 	style="display:none;"
 	data-500="bottom:100%;display:flex;"
 	data-2000="bottom:0%;display:flex;"
+	data-12500="bottom:0%;display:flex;"
+	data-14000="bottom:100%;display:none;"
 	>
 		<div class="transition"
 		data-500="bottom:0%;opacity:1;"
 		data-1500="bottom:-5%;opacity:1;"
-		data-2000="bottom:0%;opacity:1;">>
-			<img src="assets/2D/clouda-transition.png">
+		data-2000="bottom:0%;opacity:1;"
+		data-12500="bottom:-5%;opacity:1;">
+			<img src="assets/2D/clouda-transition.png"
+			>
+		</div>
+		<div class="moving-cloud">
+			<img class="mc1"src="vi-asset-2d-cloud-transparant-1.png">
+			<img class="mc2" src="vi-asset-2d-cloud-transparant-2.png">
+			<img class="mc3"src="vi-asset-2d-cloud-white-1.png">
+			<img class="mc4"src="vi-asset-2d-cloud-white-2.png">
 		</div>
 		<div class="map-wrapper">
 			<img 
-			class="map skrollable" 
+			class="map" 
 			src="assets/map.JPG"
+			data-11800="opacity:1;top:0px;"
+			data-12500="opacity:0;top:-500px;" 
 			>
 			<!-- puncak cibuti position set -->
 			<div class="map-pos puncak-cibuti"
-			style="display:none;"
+			data-0="display:none;"
+			data-2500="
+			display:block;    
+			right: 450px;
+			opacity: 0;"
+			data-3000="    
+			right: 420px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-3200="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
 					class="icon skrollable" 
@@ -74,89 +97,281 @@
 			</div>
 			<!-- puncak darma position set -->
 			<div class="map-pos puncak-darma"
-			style="display:none;"
+			data-0="display:none;"
+			data-3500="
+			display:block;    
+			right: 450px;
+			opacity: 0;"
+			data-4000="    
+			right: 430px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-4200="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/mountain/mountain-4.png"
 				>
 				<span>puncak darma</span>
 			</div>
 			<!-- karang deau position set -->
 			<div class="map-pos karang-deau"
-			style="display:none;"
+			data-0="display:none;"
+			data-4700="
+			display:block;    
+			right: 580px;
+			opacity: 0;"
+			data-5200="    
+			right: 560px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-5400="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/island.png"
 				>
 				<span>pulau karang deau</span>
 			</div>
 			<!-- pantai cikeueus position set -->
 			<div class="map-pos pantai-cikeueus"
-			style="display:none;"
+			data-0="display:none;"
+			data-5900="
+			display:block;    
+			right: 430px;
+			opacity: 0;"
+			data-6400="    
+			right: 410px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-6600="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/beach/Beach.png"
 				>
 				<span>pantai cikeueus & goa meong</span>
 			</div>
 			<!-- pantai cikalapa position set -->
 			<div class="map-pos pantai-cikalapa"
-			style="display:none;"
+			data-0="display:none;"
+			data-7100="
+			display:block;    
+			right: 520px;
+			opacity: 0;"
+			data-7600="    
+			right: 500px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-8600="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/beach/Beach.png"
 				>
 				<span>pantai cikalapa</span>
 			</div>
 			<!-- pantai cikalapa position set -->
 			<div class="map-pos batu-catur"
-			style="display:none;"
+			data-0="display:none;"
+			data-8300="
+			display:block;    
+			right: 450px;
+			opacity: 0;"
+			data-8800="    
+			right: 420px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-8900="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/stone.png"
 				>
 				<span>batu catur</span>
 			</div>
 			<!-- curug mawur position set -->
 			<div class="map-pos curug-mawur"
-			style="display:none;"
+			data-0="display:none;"
+			data-9400="
+			display:block;    
+			right: 260px;
+			opacity: 0;"
+			data-9900="    
+			right: 240px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-10100="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/water-fall.png"
 				>
 				<span>curug mawur</span>
 			</div>
 			<!-- curug larangan position set -->
 			<div class="map-pos curug-larangan"
-			style="display:none;"
+			data-0="display:none;"
+			data-10600="
+			display:block;    
+			right: 280px;
+			opacity: 0;"
+			data-11100="    
+			right: 260px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-11300="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-11800="opacity:1;"
+			data-12000="opacity:0;display:none;" 
 			>
 				<img 
-					class="icon skrollable" 
+					class="icon" 
 					src="assets/2D/water-fall.png"
 				>
 				<span>curug larangan</span>
 			</div>
 		</div>
 		<div class="content-wrapper">
-		<h2
-		class="skrollable" 
-		style="display:none;"
+		<img src="vi-asset-map-image-puncak-cibuti.jpg"
+			data-="display:none;"	
+			data-2500="
+				display:block;			
+				opacity: 0;"
+			data-3000="		 
+				opacity: 1;"
+			data-3200="	   
+				opacity: 1;"  
+			data-3500="	 
+				opacity: 0;   
+				display:none;" 
 		>
-			puncak cibuti</h2>
-		<img 
-			class="skrollable" 
-			src="assets/puncak cibuti.jpg"
-			style="display:none;"
+		<img src="vi-asset-map-image-puncak-darma.jpg"
+			data-="display:none;"	
+			data-3500="
+				display:block;			
+				opacity: 0;"
+			data-4000="		 
+				opacity: 1;"
+			data-4200="	   
+				opacity: 1;"  
+			data-4700="	 
+				opacity: 0;   
+				display:none;" 
+		>
+		<img src="vi-asset-map-image-karang-deaeu.jpg"
+			data-="display:none;"	
+			data-4700="
+				display:block;			
+				opacity: 0;"
+			data-5200="		 
+				opacity: 1;"
+			data-5400="	   
+				opacity: 1;"  
+			data-5900="	 
+				opacity: 0;   
+				display:none;" 
+		>
+		<img src="vi-asset-map-image-pantai-cikeueus.jpg"
+			data-="display:none;"	
+			data-5900="
+				display:block;			
+				opacity: 0;"
+			data-6400="		 
+				opacity: 1;"
+			data-6600="	   
+				opacity: 1;"  
+			data-7100="	 
+				opacity: 0;   
+				display:none;" 
+		>
+		<img src="vi-asset-map-image-pantai-cikalapa.jpg"
+			data-="display:none;"	
+			data-7100="
+				display:block;			
+				opacity: 0;"
+			data-7600="		 
+				opacity: 1;"
+			data-7800="	   
+				opacity: 1;"  
+			data-8300="	 
+				opacity: 0;   
+				display:none;" 
+		>
+		<img src="vi-asset-map-image-batu-catur.jpg"
+			data-="display:none;"	
+			data-8300="
+				display:block;			
+				opacity: 0;"
+			data-8800="		 
+				opacity: 1;"
+			data-8900="	   
+				opacity: 1;"  
+			data-9400="	 
+				opacity: 0;   
+				display:none;" 
+		>
+		<img src="vi-asset-map-image-curug-mawur.jpg"
+			data-="display:none;"	
+			data-9400="
+				display:block;			
+				opacity: 0;"
+			data-9900="		 
+				opacity: 1;"
+			data-10100="	   
+				opacity: 1;"  
+			data-10600="	 
+				opacity: 0;   
+				display:none;" 
+		>
+		<img src="vi-asset-map-image-curug-larangan.jpg"
+			data-="display:none;"	
+			data-10600="
+				display:block;			
+				opacity: 0;"
+			data-11100="		 
+				opacity: 1;"
+			data-11300="	   
+				opacity: 1;"  
+			data-11800="	 
+				opacity: 0;   
+				display:none;" 
 		>
 		</div>
 	</section>
-	<div style="height:5000px;"></div>
+	<section class="s2"	
+	data-0="display:none;bottom:-100%;"
+	data-12500="display:flex;bottom:-100%;"
+	data-14500="display:flex;bottom:0%;"
+	data-15900="display:flex;bottom:0%;"
+	data-16000="display:none;">
+		<div class="transition">
+			<img src="assets/2D/clouda-transition.png"
+			>
+		</div>
+		<div>
+			
+		</div>
+	</section>
+	<div style="height:16000px;"></div>
 	<script type="text/javascript" src="skrollr.js"></script>
 	<script type="text/javascript">
 	skrollr.init({

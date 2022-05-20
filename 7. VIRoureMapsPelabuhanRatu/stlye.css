@@ -258,12 +258,25 @@ section{
             opacity:0;
         }
       }
+      @keyframes cloud-move-2 {
+        0% {
+            right: -100%;
+            opacity:1;
+        }
+        75% {
+            opacity:1;
+        }
+        100% {
+            right:  100%;
+            opacity:0;
+        }
+      }
 /* section 1 */
-.transition{
+section.s1 .transition{
     position: absolute;
     width: 100%;
 }
-.transition img{
+section.s1 .transition img{
     width: 100%;
 }
 section.s1{
@@ -274,10 +287,44 @@ section.s1{
     background-position: center;
     background-size: cover;
 }
+    /* moving cloud */
+section.s1 .moving-cloud{
+    position: absolute;
+    width: 100%;
+    bottom: 20%;
+}
+section.s1 .moving-cloud img{
+    position: absolute;
+    bottom: 20%;
+}
+section.s1 .moving-cloud .mc1{
+    height: 100px;
+    bottom: -100px;
+    animation: cloud-move-2 15s ease infinite;
+    animation-delay: 0.5s;
+}
+section.s1 .moving-cloud .mc2{
+    height: 160px;
+    bottom: 10%;
+    animation: cloud-move 25s ease infinite;
+}
+section.s1 .moving-cloud .mc3{
+    height: 200px;
+    bottom: -150px;
+    animation: cloud-move-2 20s ease infinite;
+}
+section.s1 .moving-cloud .mc4{
+    height: 100px;
+    bottom: 10%;
+    animation: cloud-move 15s ease infinite;
+}
+/* animation moving cloud */
+
     /* map */
 section.s1 .map-wrapper{
     position: absolute;
     width: 800px;
+    top:0;
     border-radius: 20px;
     box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
 }
@@ -315,16 +362,20 @@ section.s1 span{
 .map-pos{
     z-index: 1;
     position:absolute;
+    border-radius: 10px;
 } 
-/* position */
-/* right: 330px;
-top: 210px;
 
-right: 280px;
-top: 180px; */
+/* puncak cibuti */
+/* position */
 .map-pos.puncak-cibuti{
     right: 420px;
     top: 190px;
+}
+/* image */
+section.s1 .content-wrapper img{
+    position: absolute;
+    opacity: 1;
+    max-height: 350px;
 }
 .map-pos.puncak-darma{
     right: 450px;
@@ -355,3 +406,22 @@ top: 180px; */
     top: 200px;
 }
 
+/* sectiuon 2 */
+section.s2 .transition{
+    position: absolute;
+    width: 100%;
+    bottom: 42%
+}
+section.s2 .transition img{
+    width: 100%;
+    transform: rotate(180deg);
+}
+section.s2 {
+    /* display:flex; */
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-jungle-main-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
