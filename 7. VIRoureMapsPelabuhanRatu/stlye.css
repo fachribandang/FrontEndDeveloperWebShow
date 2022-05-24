@@ -420,6 +420,7 @@ section.s1 .content-wrapper img{
     text-align: left;
     border-left: solid 5px rgba(0, 180, 167 , 1);
     background-color: rgba(255,255,255,0.8);
+    padding-left: 10px;
     left:50%;
     width: 100%;
 }
