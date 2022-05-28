@@ -425,7 +425,6 @@ section.s1 .content-wrapper img{
     width: 100%;
 }
 /* sectiuon 2 */
-
 section.s2 {
     /* display:flex; */
     justify-content: center;
@@ -434,7 +433,6 @@ section.s2 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border:solid 1px;
 }
 section.s2 .transition{
     position: absolute;
@@ -508,7 +506,7 @@ section.s2 .content-wrapper .jleaf2.obj1{
 } 
 section.s2 .content-wrapper .jleaf2.obj2{
 	animation-duration: 7s, 8s;
-    animation-delay: 5s;
+    animation-delay: 6s;
     left:35%;
 } 
 section.s2 .content-wrapper .jleaf2.obj3{
@@ -518,7 +516,7 @@ section.s2 .content-wrapper .jleaf2.obj3{
 } 
 section.s2 .content-wrapper .jleaf2.obj3{
 	animation-duration: 7s, 8s;
-    animation-delay: 13s;
+    animation-delay: 5s;
     left:78%;
 } 
 
@@ -549,4 +547,193 @@ section.s2 .content-wrapper .jleaf2.obj3{
         top: 100%;	
 		filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
 	}
+}
+/* sectiuon 3 */
+.t-on{
+    opacity: 0;
+}
+section.s3 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-forest-sky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s3 .forest-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s3 .forest-wrapper img{
+    position: absolute;
+}
+.forest-cloud-1{
+    top:10%;
+    height:20%;
+    animation-delay: 0.25s;
+    animation: f-cloud-move-left 50s ease infinite;
+}
+.forest-cloud-2{
+    top:0%;
+    height:20%;
+    animation-delay: 0.5s;
+    animation: f-cloud-move-left 40s ease infinite;
+}
+.forest-cloud-3{
+    top:5%;
+    height:20%;
+    animation-delay: 1s;
+    animation: f-cloud-move-left 30s ease infinite;
+}
+.forest-cloud-4{
+    top:15%;
+    height:25%;
+    animation-delay: 0.75s;
+    animation: f-cloud-move-right 60s ease infinite;
+}
+.forest-cloud-5{
+    top:7%;
+    height:10%;
+    animation-delay: 1.35s;
+    animation: f-cloud-move-left 20s ease infinite;
+}
+.forest-cloud-6{
+    top:17%;
+    height:15%;
+    animation-delay: 0.7s;
+    animation: f-cloud-move-right 35s ease infinite;
+}
+
+@keyframes f-cloud-move-left {
+    0% {
+        left: -35%;
+        opacity:1;
+    }
+    75% {
+        opacity:1;
+    }
+    100% {
+        left:  135%;
+        opacity:0;
+    }
+  }
+@keyframes f-cloud-move-right {
+    0% {
+        right:  -35%;
+        opacity:1;
+    }
+    75% {
+        opacity:1;
+    }
+    100% {
+        right:  135%;
+        opacity:0;
+    }
+  }
+  
+/* sectiuon 4 */
+section.s4 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-water-fall-sky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s4 .water-fall-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s4 .water-fall-wrapper img{
+    position: absolute;
+}
+.wf-water{
+    animation: wf-water-move 5s ease infinite;
+}
+@keyframes wf-water-move {
+    0% {
+        bottom:  0%;
+        opacity: 1;
+    }
+    50% {
+        bottom:  1%;
+        opacity: 0.9;
+    }
+    100% {
+        bottom:  0%;
+        opacity: 1;
+    }
+  }
+  
+/* sectiuon 5 */
+section.s5 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-cave-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s5 .cave-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s5 .cave-wrapper img{
+    position: absolute;
+}
+/* sectiuon 6 */
+section.s6 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-m-hill-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s6 .m-hill-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s6 .m-hill-wrapper img{
+    position: absolute;
+}
+section.s6 .m-hill-cloud-1{
+    animation-delay: 0.35s;
+    animation: f-cloud-move-right 20s ease infinite;
+}
+section.s6 .m-hill-cloud-2{
+    animation-delay: 0.25s;
+    animation: f-cloud-move-right 30s ease infinite;
+}
+section.s6 .m-hill-cloud-3{
+    animation-delay: 0.45s;
+    animation: f-cloud-move-right 25s ease infinite;
+}
+section.s6 .m-hill-cloud-4{
+    animation-delay: 0.35s;
+    animation: f-cloud-move-left 25s ease infinite;
+}
+section.s6 .m-hill-cloud-5{
+    animation-delay: 0.25s;
+    animation: f-cloud-move-left 35s ease infinite;
+}
+section.s6 .m-hill-cloud-6{
+    animation-delay: 0.45s;
+    animation: f-cloud-move-right 30s ease infinite;
+}
+section.s6 .text-desc{
+    padding-bottom: 30px;
+}
+.text-desc a{
+    padding-left:60px;
+}
+.text-desc a img{
+    transition: all 0.3s ease;
+}
+.text-desc a:hover img{
+    scale: 1.1;
 }
