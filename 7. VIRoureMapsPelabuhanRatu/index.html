@@ -1361,14 +1361,26 @@
 				</div>
 		</div>
 	</section>
-
+	<div id="loader" class="center"></div>
 	<div style="height:58000px;"></div>
 	<script type="text/javascript" src="skrollr.js"></script>
 	<script type="text/javascript">
 	skrollr.init({
 		forceHeight: false
 	});
+	document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
 	</script>
 </body>
-
 </html>
