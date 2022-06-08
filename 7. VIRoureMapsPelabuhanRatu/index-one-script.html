@@ -1,0 +1,3753 @@
+<!DOCTYPE html>
+<html class="skrollr skrollr-desktop" lang="en">
+<head>
+	<title>rute pelabuhan ratu</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Virtual interaktif geological ciletuh">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root{
+    --navyblue: rgb(20,14,70,1);
+    --navyblue-secondary: rgb(20,14,70,0.75);
+    --overlay-white: rgba(255,255,255,0.75);
+}
+/* common rule */
+html, body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--navyblue);
+};
+body {
+    height: 100%;
+    width: 100%;
+}
+    /* for section */
+section{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.test{
+    border: solid black;
+}
+/* --------- Opening --------- */
+.page-title{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.page-title-background{
+    height: 100%;
+    width: 100%;
+    /* background-image: url(assets/geological.jpg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page-title-background img{
+    position: absolute;
+}
+.page-title-background img.sky{
+    height: 100%;
+    width: 100%;
+}
+.page-title-background img.ground{
+    width: 100%;
+    bottom:0;
+}
+.page-title-background img.ground-water{
+    width: 100%;
+    bottom:10px;
+    left:20px;
+    animation: move-down-up-water-1 2s ease infinite;
+}
+.page-title-background img.ground-water-2{
+    width: 100%;
+    bottom:0px;
+    left:0px;
+}
+.page-title-background img.ground-water-3{
+    width: 100%;
+    bottom:10px;
+    left:20px;
+    animation: move-down-up-water-2 2s ease infinite;
+    animation-delay: 0.25s;
+}
+.page-title-background img.sea{
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    animation: sea-move 6s ease infinite;
+    animation-delay: 0.25s;
+}
+.page-title-background img.bird-all{
+    width: 100%;
+    bottom: 20%;
+    left: 0%;
+    animation: all-bird-fly 3s ease infinite;
+    animation-delay: 0.25s;
+}
+.page-title-background .bird-container{
+    position: absolute;
+    bottom: 70%;
+    left: 80%;
+    height:40px;
+    width:60px;
+    animation: bird-fly 4s ease infinite;
+}
+.page-title-background .bird-container img{
+    height: 100%;
+    width: 100%;
+}
+.page-title-background img.stone{
+    width: 100%;
+    bottom:0px;
+    left:0px;
+}
+.page-title-background img.cloud-1{
+    top:0px;
+    left:0px;
+    animation: cloud-move 120s ease infinite;
+}
+.page-title-background img.cloud-2{
+    top:0px;
+    left:20%;
+    animation: cloud-move 30s ease infinite;
+}
+.page-title-background img.cloud-3{
+    top:0px;
+    left:60%;
+    animation: cloud-move 60s ease infinite;
+}
+.page-title-background img.cloud-12{
+    top:0px;
+    left:20%;
+    scale: 0.2;
+    animation: cloud-move 60s ease infinite;
+}
+.page-title-background img.cloud-32{
+    top:0px;
+    left:60%;
+    scale: 0.5;
+    animation: cloud-move 80s ease infinite;
+}
+
+    /* text */
+.page-title-text h1{
+    text-transform: uppercase;
+    font-size: 64px;
+}
+.page-title-text{
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+    letter-spacing: 5px;
+    background-color:var(--overlay-white);
+    top: 30%;
+    left: 0;
+} 
+.scroll-icon{
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    animation: scroll-move 2s ease infinite;
+}
+.scroll-icon p{
+    padding:0;
+    margin:0;
+}
+.scroll-icon img{
+    width: 50px;
+}
+
+
+    /* animation opening */
+    @keyframes scroll-move {
+        0% {
+            bottom:-150px;
+        }
+        35% {
+            bottom:-130px;
+        }
+        100% {
+            bottom:-150px;
+        }
+      }
+    @keyframes sea-move {
+        0% {
+            bottom:5px;
+        }
+        50% {
+            bottom:0px;
+        }
+        100% {
+            bottom:5px;
+        }
+      }
+    @keyframes move-down-up-water-1 {
+        0% {
+            bottom:0px;
+            left:20px;
+        }
+        50% {
+            bottom:-10px;
+            left:0px;
+        }
+        100% {
+            bottom:0px;
+            left:20px;
+        }
+      }
+      @keyframes move-down-up-water-2 {
+          0% {
+              bottom:10px;
+              left:20px;
+          }
+          50% {
+              bottom:0px;
+              left:0px;
+          }
+          100% {
+              bottom:10px;
+              left:20px;
+          }
+        }
+        
+    @keyframes all-bird-fly {
+        0% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+        }
+        50% {
+            margin-bottom:20px;
+        }
+        100% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+        }
+    }
+    @keyframes bird-fly {
+        0% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+            width:60px;
+            height:40px;
+        }
+        50% {
+            margin-bottom:20px;
+            width:50px;
+        }
+        100% {
+            padding: 0px  0px 0px 0px;
+            margin-bottom:0;
+            width:60px;
+            height:40px;
+        }
+      }
+      @keyframes cloud-move {
+        0% {
+            left: -100%;
+            opacity:1;
+        }
+        75% {
+            opacity:1;
+        }
+        100% {
+            left:  100%;
+            opacity:0;
+        }
+      }
+      @keyframes cloud-move-2 {
+        0% {
+            right: -100%;
+            opacity:1;
+        }
+        75% {
+            opacity:1;
+        }
+        100% {
+            right:  100%;
+            opacity:0;
+        }
+      }
+/* section 1 */
+section.s1 .transition{
+    position: absolute;
+    width: 100%;
+}
+section.s1 .transition img{
+    width: 100%;
+}
+section.s1{
+    display: flex;
+    justify-content: center;
+    background-image: url('assets/2D/beach 2/sky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    /* moving cloud */
+section.s1 .moving-cloud{
+    position: absolute;
+    width: 100%;
+    bottom: 20%;
+}
+section.s1 .moving-cloud img{
+    position: absolute;
+    bottom: 20%;
+}
+section.s1 .moving-cloud .mc1{
+    height: 100px;
+    bottom: -100px;
+    animation: cloud-move-2 15s ease infinite;
+    animation-delay: 0.5s;
+}
+section.s1 .moving-cloud .mc2{
+    height: 160px;
+    bottom: 10%;
+    animation: cloud-move 25s ease infinite;
+}
+section.s1 .moving-cloud .mc3{
+    height: 200px;
+    bottom: -150px;
+    animation: cloud-move-2 20s ease infinite;
+}
+section.s1 .moving-cloud .mc4{
+    height: 100px;
+    bottom: 10%;
+    animation: cloud-move 15s ease infinite;
+}
+/* animation moving cloud */
+
+    /* map */
+section.s1 .map-wrapper{
+    position: absolute;
+    width: 800px;
+    top:0;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
+    transition: all ease;
+}
+section.s1 .map-wrapper .map{
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
+}
+    /* content */
+section.s1 .content-wrapper{
+    position: absolute;
+    text-align: center;
+    top:50%;
+    width: 500px;
+}
+section.s1 .content-wrapper img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: -5px 5px 15px rgb(0,0,0,0.8) ;
+}
+
+.map-pos img{
+    width: 30px;
+    border-radius: 30px;
+}
+section.s1 span{
+    font-size: 25x;
+    text-transform: capitalize;	
+    text-decoration: underline;
+    color: #ffffff;
+    background-color: rgba(21, 254, 0, 0);
+    text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+}
+.map-pos{
+    z-index: 1;
+    position:absolute;
+    border-radius: 10px;
+} 
+
+/* puncak cibuti */
+/* position */
+.map-pos.puncak-cibuti{
+    right: 420px;
+    top: 190px;
+}
+/* image */
+section.s1 .content-wrapper img{
+    position: absolute;
+    opacity: 1;
+    max-height: 350px;
+    transition: all ease;
+}
+.map-pos.puncak-darma{
+    right: 450px;
+    top: 170px;
+}
+.map-pos.karang-deau{
+    right: 580px;
+    top: 120px;
+}
+.map-pos.pantai-cikeueus{
+    right: 430px;
+    top: 100px;
+}
+.map-pos.pantai-cikalapa{
+    right: 520px;
+    top: 70px;
+}
+.map-pos.batu-catur{
+    right: 450px;
+    top: 90px;
+}
+.map-pos.curug-mawur{
+    right: 260px;
+    top: 170px;
+}
+.map-pos.curug-larangan{
+    right: 280px;
+    top: 200px;
+}
+.text-title{
+    position: absolute;
+    text-align: left;
+    color : rgba(20,46,70,1);
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    left:50%;
+    width: 100%;
+}
+.text-desc{
+    position: absolute;
+    text-align: left;
+    border-left: solid 5px rgba(0, 180, 167 , 1);
+    background-color: rgba(255,255,255,0.8);
+    padding-left: 25px;
+    left:50%;
+    width: 100%;
+}
+/* sectiuon 2 */
+section.s2 {
+    /* display:flex; */
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-jungle-main-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s2 .transition{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+section.s2 .transition.t1 img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(180deg); 
+}
+section.s2 .transition.t2 img{
+    width: 100%;
+}
+section.s2 .content-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+section.s2 .content-wrapper img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+section.s2 .content-wrapper img.jungle-tree-left{
+    width: 100% !important;
+    left: 0;
+}
+section.s2 .content-wrapper img.jungle-tree-right{
+    width: 50% !important;
+    right: 0;
+} 
+section.s2 .content-wrapper .jlaef{
+    width: 7%;
+    top: -30%;	
+    animation-name: fall, sway;
+	animation-fill-mode: both;
+	animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite;
+} 
+section.s2 .content-wrapper .jleaf2{
+    width: 5%;
+    top: -30%;
+    animation-name: fall, sway;
+	animation-fill-mode: both;
+	animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite;
+} 
+section.s2 .content-wrapper .jlaef.obj1{
+	animation-duration: 7s, 8s;
+    animation-delay: 5.25s;
+    left:20%;
+} 
+section.s2 .content-wrapper .jlaef.obj2{
+	animation-duration: 7s, 8s;
+    animation-delay: 0.25s;
+    left:30%;
+} 
+section.s2 .content-wrapper .jlaef.obj3{
+	animation-duration: 7s, 8s;
+    animation-delay: 8s;
+    left:80%;
+} 
+section.s2 .content-wrapper .jleaf2.obj1{
+	animation-duration: 7s, 8s;
+    animation-delay: 18s;
+    left:55%;
+} 
+section.s2 .content-wrapper .jleaf2.obj2{
+	animation-duration: 7s, 8s;
+    animation-delay: 6s;
+    left:35%;
+} 
+section.s2 .content-wrapper .jleaf2.obj3{
+	animation-duration: 7s, 8s;
+    animation-delay: 13s;
+    left:78%;
+} 
+section.s2 .content-wrapper .jleaf2.obj3{
+	animation-duration: 7s, 8s;
+    animation-delay: 5s;
+    left:78%;
+} 
+
+/* jungle animation */
+@keyframes sway { 
+	0% { 
+		transform: rotateZ(-15deg) rotateX(55deg);
+	}
+    30% {
+		transform: rotateZ(20deg) rotateX(60deg);
+		animation-timing-function: ease-in-out;
+	}
+	60% { 
+		transform: rotateZ(-20deg) rotateX(55deg);
+		animation-timing-function: ease-in-out;
+	}
+    100% {
+		transform: rotateZ(0deg) rotateX(58deg);
+		animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.435);
+		}
+}
+@keyframes fall { 
+    0% {
+        top: -30%;	
+		filter: drop-shadow(0px 60px 40px rgba(0,0,0,0));
+	}
+	100% {
+        top: 100%;	
+		filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
+	}
+}
+/* sectiuon 3 */
+.t-on{
+    opacity: 0;
+}
+section.s3 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-forest-sky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s3 .forest-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s3 .forest-wrapper img{
+    position: absolute;
+}
+.forest-cloud-1{
+    top:10%;
+    height:20%;
+    animation-delay: 0.25s;
+    animation: f-cloud-move-left 50s ease infinite;
+}
+.forest-cloud-2{
+    top:0%;
+    height:20%;
+    animation-delay: 0.5s;
+    animation: f-cloud-move-left 40s ease infinite;
+}
+.forest-cloud-3{
+    top:5%;
+    height:20%;
+    animation-delay: 1s;
+    animation: f-cloud-move-left 30s ease infinite;
+}
+.forest-cloud-4{
+    top:15%;
+    height:25%;
+    animation-delay: 0.75s;
+    animation: f-cloud-move-right 60s ease infinite;
+}
+.forest-cloud-5{
+    top:7%;
+    height:10%;
+    animation-delay: 1.35s;
+    animation: f-cloud-move-left 20s ease infinite;
+}
+.forest-cloud-6{
+    top:17%;
+    height:15%;
+    animation-delay: 0.7s;
+    animation: f-cloud-move-right 35s ease infinite;
+}
+
+@keyframes f-cloud-move-left {
+    0% {
+        left: -35%;
+        opacity:1;
+    }
+    75% {
+        opacity:1;
+    }
+    100% {
+        left:  135%;
+        opacity:0;
+    }
+  }
+@keyframes f-cloud-move-right {
+    0% {
+        right:  -35%;
+        opacity:1;
+    }
+    75% {
+        opacity:1;
+    }
+    100% {
+        right:  135%;
+        opacity:0;
+    }
+  }
+  
+/* sectiuon 4 */
+section.s4 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-water-fall-sky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s4 .water-fall-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s4 .water-fall-wrapper img{
+    position: absolute;
+}
+.wf-water{
+    animation: wf-water-move 5s ease infinite;
+}
+@keyframes wf-water-move {
+    0% {
+        bottom:  0%;
+        opacity: 1;
+    }
+    50% {
+        bottom:  1%;
+        opacity: 0.9;
+    }
+    100% {
+        bottom:  0%;
+        opacity: 1;
+    }
+  }
+  
+/* sectiuon 5 */
+section.s5 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-cave-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s5 .cave-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s5 .cave-wrapper img{
+    position: absolute;
+}
+/* sectiuon 6 */
+section.s6 {
+    justify-content: center;
+    height:100%;
+    background-image: url('vi-asset-2d-m-hill-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+section.s6 .m-hill-wrapper{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+section.s6 .m-hill-wrapper img{
+    position: absolute;
+}
+section.s6 .m-hill-cloud-1{
+    animation-delay: 0.35s;
+    animation: f-cloud-move-right 20s ease infinite;
+}
+section.s6 .m-hill-cloud-2{
+    animation-delay: 0.25s;
+    animation: f-cloud-move-right 30s ease infinite;
+}
+section.s6 .m-hill-cloud-3{
+    animation-delay: 0.45s;
+    animation: f-cloud-move-right 25s ease infinite;
+}
+section.s6 .m-hill-cloud-4{
+    animation-delay: 0.35s;
+    animation: f-cloud-move-left 25s ease infinite;
+}
+section.s6 .m-hill-cloud-5{
+    animation-delay: 0.25s;
+    animation: f-cloud-move-left 35s ease infinite;
+}
+section.s6 .m-hill-cloud-6{
+    animation-delay: 0.45s;
+    animation: f-cloud-move-right 30s ease infinite;
+}
+section.s6 .text-desc{
+    padding-bottom: 30px;
+}
+.text-desc a{
+    padding-left:60px;
+}
+.text-desc a img{
+    transition: all 0.3s ease;
+}
+.text-desc a:hover img{
+    scale: 1.1;
+}
+</style>
+<body>
+	<!-- page title -->
+	<section class="page-title"
+		data-500="bottom:0%;display:block;"
+		data-2000="bottom:-100%;display:none;"
+		>
+		<div class="page-title-background skrollable"
+		>
+			<img class="sky" src="assets/2D/beach 2/sky.png">
+			<img class="sea" src="assets/2D/beach 2/sea.png">
+			<img class="cloud-1" src="assets/2D/beach 2/cloud-1.png">
+			<img class="cloud-2" src="assets/2D/beach 2/cloud-2.png">
+			<img class="cloud-3" src="assets/2D/beach 2/cloud-3.png">
+			<img class="cloud-32" src="assets/2D/beach 2/cloud-2.png">
+			<img class="cloud-12" src="assets/2D/beach 2/cloud-1.png">
+			<img class="ground" src="assets/2D/beach 2/ground.png">
+			<img class="ground-water" src="assets/2D/beach 2/ground-water.png">
+			<img class="ground-water-2" src="assets/2D/beach 2/ground-water-2.png">
+			<img class="ground-water-3" src="assets/2D/beach 2/ground-water-2.png">
+			<div class="bird-container">
+				<img class="bird-1" src="assets/2D/beach 2/bird 1.png">
+			</div>
+			<img class="bird-all" src="assets/2D/beach 2/bird all.png">
+			<img class="stone" src="assets/2D/beach 2/stone.png">
+		</div>
+		<div class="page-title-text skrollable"
+		>
+			<h1>Geopark Ciletuh</h1>  
+			<p>jalur geowisata 4 ciletuh palabuhanratu</p>
+			<div class="scroll-icon">
+				<img src="assets/icon/mouse-scroll.png"> 
+				<p>scroll</p>
+			</div>
+		</div>
+		
+	</section>
+	<!-- section 1 -->
+	<section class="s1"
+	style="display:none;"
+	data-500="bottom:100%;display:flex;"
+	data-2000="bottom:0%;display:flex;"
+	data-16500="bottom:0%;display:flex;"
+	data-18500="bottom:100%;display:none;"
+	>
+		<div class="transition"
+		data-500="bottom:0%;opacity:1;"
+		data-1500="bottom:-5%;opacity:1;"
+		data-2000="bottom:0%;opacity:1;"
+		data-16000="bottom:-5%;opacity:1;">
+			<img src="assets/2D/clouda-transition.png"
+			>
+		</div>
+		<div class="moving-cloud">
+			<img class="mc1"src="vi-asset-2d-cloud-transparant-1.png">
+			<img class="mc2" src="vi-asset-2d-cloud-transparant-2.png">
+			<img class="mc3"src="vi-asset-2d-cloud-white-1.png">
+			<img class="mc4"src="vi-asset-2d-cloud-white-2.png">
+		</div>
+		<div class="map-wrapper"
+		data-16000="opacity:1;top:0px;"
+		data-17000="opacity:0;top:-500px;" >
+			<img 
+			class="map" 
+			src="assets/map.JPG"
+			>
+			<!-- puncak cibuti position set -->
+			<div class="map-pos puncak-cibuti"
+			data-0="display:none;"
+			data-4000="
+			display:block;    
+			right: 450px;
+			opacity: 0;"
+			data-4500="    
+			right: 420px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-5000="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon skrollable" 
+					src="assets/2D/mountain/mountain-4.png"
+				>
+				<span>puncak cibuti</span>
+			</div>
+			<!-- puncak darma position set -->
+			<div class="map-pos puncak-darma"
+			data-0="display:none;"
+			data-5500="
+			display:block;    
+			right: 450px;
+			opacity: 0;"
+			data-6000="    
+			right: 430px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-6500="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/mountain/mountain-4.png"
+				>
+				<span>puncak darma</span>
+			</div>
+			<!-- karang deau position set -->
+			<div class="map-pos karang-deau"
+			data-0="display:none;"
+			data-7000="
+			display:block;    
+			right: 580px;
+			opacity: 0;"
+			data-7500="    
+			right: 560px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-8000="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/island.png"
+				>
+				<span>pulau karang deau</span>
+			</div>
+			<!-- pantai cikeueus position set -->
+			<div class="map-pos pantai-cikeueus"
+			data-0="display:none;"
+			data-8500="
+			display:block;    
+			right: 430px;
+			opacity: 0;"
+			data-9000="    
+			right: 410px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-9500="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/beach/Beach.png"
+				>
+				<span>pantai cikeueus & goa meong</span>
+			</div>
+			<!-- pantai cikalapa position set -->
+			<div class="map-pos pantai-cikalapa"
+			data-0="display:none;"
+			data-10000="
+			display:block;    
+			right: 520px;
+			opacity: 0;"
+			data-10500="    
+			right: 500px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-11000="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/beach/Beach.png"
+				>
+				<span>pantai cikalapa</span>
+			</div>
+			<!-- pantai batu catur position set -->
+			<div class="map-pos batu-catur"
+			data-0="display:none;"
+			data-11500="
+			display:block;    
+			right: 450px;
+			opacity: 0;"
+			data-12000="    
+			right: 420px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-12500="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/stone.png"
+				>
+				<span>batu catur</span>
+			</div>
+			<!-- curug mawur position set -->
+			<div class="map-pos curug-mawur"
+			data-0="display:none;"
+			data-13000="
+			display:block;    
+			right: 260px;
+			opacity: 0;"
+			data-13500="    
+			right: 240px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-14000="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/water-fall.png"
+				>
+				<span>curug mawur</span>
+			</div>
+			<!-- curug larangan position set -->
+			<div class="map-pos curug-larangan"
+			data-0="display:none;"
+			data-14500="
+			display:block;    
+			right: 280px;
+			opacity: 0;"
+			data-15000="    
+			right: 260px;
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.0);"
+			data-15500="    
+			background-color: rgba(255, 255, 255, 0.3);"
+			data-19500="opacity:1;"
+			data-20000="opacity:0;display:none;" 
+			>
+				<img 
+					class="icon" 
+					src="assets/2D/water-fall.png"
+				>
+				<span>curug larangan</span>
+			</div>
+		</div>
+		<div class="content-wrapper"	
+		>
+			<div class="text-title"
+			style="margin-top:-70%;"
+			data-="display:none;"	
+			data-2500="display:block;opacity: 0;left:100%;"
+			data-3000="opacity: 1;left:90%;"
+			data-3500="opacity: 1;left:90%;"  
+			data-4000="opacity: 0;left:100%;display:none;" >
+				<h2>Geopark ciletuh</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:-60%;"
+			data-="display:none;"	
+			data-2500="display:block;opacity: 0;left:100%;"
+			data-3000="opacity: 1;left:90%;"
+			data-3500="opacity: 1;left:90%;"  
+			data-4000="opacity: 0;left:100%;display:none;" >
+				<p>Bagian selatan geopark  ciletuh memiliki 
+					bentang alam yang sangat unik dan langka,
+					yaitu berupa bentuk daratan tinggi dengan 
+					lembah berbentuk tapal kuda yang terbuka 
+					ke arah laut sehingga membentuk seperti 
+					panggung alam (amfiteater)
+				</p>
+			</div>
+			<div class="text-desc"
+			style="margin-top:-40%;"
+			data-="display:none;"	
+			data-2500="display:block;opacity: 0;left:-100%;"
+			data-3000="opacity: 1;left:-90%;"
+			data-3500="opacity: 1;left:-90%;"  
+			data-4000="opacity: 0;left:-100%;display:none;" >
+				<p>Amfiteater ini terbentuk karena adanya proses 
+					geologi berupa sesar normal yang diikuti oleh 
+					sebuah longsoran yang besar karena gaya vertikal 
+					lebih besar dari gaya horizontal. Lembah amfiteater 
+					dipenuhi oleh keindahan hamparan sawah.
+				</p>
+			</div>
+			<div class="text-desc"
+			style="margin-top:0%;"
+			data-="display:none;"	
+			data-2500="display:block;opacity: 0;left:100%;"
+			data-3000="opacity: 1;left:90%;"
+			data-3500="opacity: 1;left:90%;"  
+			data-4000="opacity: 0;left:100%;display:none;" >
+				<p>Keindahan amfiteater dan Teluk Ciletuh dapat dilihat 
+					dari daerah Panenjoan di Desa Tamanjaya, Pamoyanan 
+					di Desa Ciemas, Puncak Tugu di Desa Mekarjaya, 
+					Puncak darma dan Cikalapa di Desa Girimukti. 
+				</p>
+			</div>
+			<img src="vi-asset-tapal-kuda.jpg"
+				style="margin-top:10%;"
+				data-="display:none;"	
+				data-2000="display:block;opacity: 0;left:-100%;"
+				data-2500="opacity: 1;left:-70%;"
+				data-3000="opacity: 1;left:-70%;" 
+				data-3500="opacity: 1;left:-70%;"  
+				data-4000="opacity: 0;left:-100%;display:none;" 
+			>
+
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-4000="display:block;opacity: 0;left:100%;"
+			data-4500="opacity: 1;left:50%;"
+			data-5000="opacity: 1;left:50%;"  
+			data-5250="opacity: 0;left:100%;display:none;" >
+				<h2>View Point Pamoyanan, Mekarjaya</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-4000="display:block;opacity: 0;left:100%;"
+			data-4500="opacity: 1;left:50%;"
+			data-5000="opacity: 1;left:50%;"  
+			data-5250="opacity: 0;left:100%;display:none;" >
+				<p>Pemandangan indah ini dapat dilihat dari 
+					Pamoyanan, Desa Mekarjaya. Yang dimana dapat ditempuh dengan mobil 4 Wheel Drive (4WD) ataupun sepeda motor dengan waktu tempuh 30 menit dan melalui jalan berbatu dari jalan utama Desa Tamanjaya
+				</p>
+			</div>
+			<img src="vi-asset-map-image-puncak-cibuti.jpg"
+				data-="display:none;"	
+				data-4000="display:block;opacity: 0;left:-100%;"
+				data-4500="opacity: 1;left:-70%;"
+				data-5000="opacity: 1;left:-70%;"  
+				data-5250="opacity: 0;left:-100%;display:none;" 
+			>
+
+			<img src="vi-asset-map-image-puncak-darma.jpg"
+				data-="display:none;"	
+				data-5500="
+					display:block;			
+					opacity: 0;left:100%;"
+				data-6000="		 
+					opacity: 1;left:50%;"
+				data-6500="	   
+					opacity: 1;left:50%;"  
+				data-6750="	 
+					opacity: 0;   
+					display:none;left:100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-5500="display:block;opacity: 0;left:-100%;"
+			data-6000="opacity: 1;left:-50%;"
+			data-6500="opacity: 1;left:-50%;"  
+			data-6750="opacity: 0;left:-100%;display:none;" >
+				<h2>View Point Puncak Darma From Girimukti</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-5500="display:block;opacity: 0;left:-100%;"
+			data-6000="opacity: 1;left:-50%;"
+			data-6500="opacity: 1;left:-50%;"  
+			data-6750="opacity: 0;left:-100%;display:none;" >
+				<p>Pemandangan Teluk Ciletuh ini dapat dilihat dari 
+					Puncak Darma dan Cikalapa Desa Girimukti. Akses 
+					dapat ditempuh dengan mobil atau sepeda motor 
+					selama 15 menit dari Pantai Palangpan di Desa
+					Ciwaru dengan kondisi jalan mendaki, juga dapat 
+					ditempuh dari jalan utama Desa Girimukti.</p>
+			</div>
+			
+			<img src="vi-asset-map-image-karang-deaeu.jpg"
+				data-="display:none;"	
+				data-7000="
+					display:block;			
+					opacity: 0;left:-100%;"
+				data-7500="		 
+					opacity: 1;left:-50%;"
+				data-8000="	   
+					opacity: 1;left:-50%;"  
+				data-8250="	 
+					opacity: 0;   
+					display:none;left:-100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-7000="display:block;opacity: 0;left:100%;"
+			data-7500="opacity: 1;left:50%;"
+			data-8000="opacity: 1;left:50%;"  
+			data-8250="opacity: 0;left:100%;display:none;" >
+				<h2>View Point Karang Daeu</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-7000="display:block;opacity: 0;left:100%;"
+			data-7500="opacity: 1;left:50%;"
+			data-8000="opacity: 1;left:50%;"  
+			data-8250="opacity: 0;left:100%;display:none;" >
+				<p>Pulau Karang Daeu, terletak di Pantai Cikalapa, 
+					Desa Girimukti. Pulau ini berbentuk unik 
+					seperti kelinci merunduk atau anjing pudel 
+					berbaring. Pulau ini dapat diakses dengan 
+					perahu sekitar 5 menit dari pantai Palangpang, 
+					dan pada saat surut, pulau ini dapat diakses 
+					berjalan kaki dari Pantai Cikalapa. Secara 
+					geologi, terdiri atas batuan sedimen Formasi
+					Ciletuh yang memiliki struktur sedimen sekuen 
+					Bouma.</p>
+			</div>
+
+			<img src="vi-asset-map-image-pantai-cikeueus.jpg"
+				data-="display:none;"	
+				data-8500="
+					display:block;			
+					opacity: 0;left:100%;"
+				data-9000="		 
+					opacity: 1;left:50%;"
+				data-9500="	   
+					opacity: 1;left:50%;"  
+				data-9750="	 
+					opacity: 0;   
+					display:none;left:100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-8500="display:block;opacity: 0;left:-100%;"
+			data-9000="opacity: 1;left:-50%;"
+			data-9500="opacity: 1;left:-50%;"  
+			data-9750="opacity: 0;left:-100%;display:none;" >
+				<h2>Pantai Cikeueus, Goa Meong</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-8500="display:block;opacity: 0;left:-100%;"
+			data-9000="opacity: 1;left:-50%;"
+			data-9500="opacity: 1;left:-50%;"  
+			data-9750="opacity: 0;left:-100%;display:none;" >
+				<p>Pulau Karang Daeu, terletak di Pantai Cikalapa, 
+					Desa Girimukti. Pulau ini berbentuk unik 
+					seperti kelinci merunduk atau anjing pudel 
+					berbaring. Pulau ini dapat diakses dengan 
+					perahu sekitar 5 menit dari pantai Palangpang, 
+					dan pada saat surut, pulau ini dapat diakses 
+					berjalan kaki dari Pantai Cikalapa. Secara 
+					geologi, terdiri atas batuan sedimen Formasi
+					Ciletuh yang memiliki struktur sedimen sekuen 
+					Bouma.</p>
+			</div>
+
+			<img src="vi-asset-map-image-pantai-cikalapa.jpg"
+				data-="display:none;"	
+				data-10000="
+					display:block;			
+					opacity: 0;left:-100%;"
+				data-10500="		 
+					opacity: 1;left:-50%;"
+				data-11000="	   
+					opacity: 1;left:-50%;"  
+				data-11250="	 
+					opacity: 0;   
+					display:none;left:-100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-10000="display:block;opacity: 0;left:100%;"
+			data-10500="opacity: 1;left:50%;"
+			data-11000="opacity: 1;left:50%;"  
+			data-11250="opacity: 0;left:100%;display:none;" >
+				<h2>Pantai Cikalapa</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-10000="display:block;opacity: 0;left:100%;"
+			data-10500="opacity: 1;left:50%;"
+			data-11000="opacity: 1;left:50%;"  
+			data-11250="opacity: 0;left:100%;display:none;" >
+				<p>Pantai Cikalapa atau sering disebut juga 
+					sebagai Pantai Karang Daeu, terletak di 
+					Desa Girimukti. Akses menuju pantai ini 
+					menggunakan sepeda motor dari Puncakdarma, 
+					kira-kira 30 menit dengan pemandangan 
+					indah hamparan hijau padi huma di sepanjang 
+					perjalanan.</p>
+			</div>
+
+			<img src="vi-asset-map-image-batu-catur.jpg"
+				data-="display:none;"	
+				data-11500="
+					display:block;			
+					opacity: 0;left:100%;"
+				data-12000="		 
+					opacity: 1;left:50%;"
+				data-12500="	   
+					opacity: 1;left:50%;"  
+				data-12750="	 
+					opacity: 0;   
+					display:none;left:100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-11500="display:block;opacity: 0;left:-100%;"
+			data-12000="opacity: 1;left:-50%;"
+			data-12500="opacity: 1;left:-50%;"  
+			data-12750="opacity: 0;left:-100%;display:none;" >
+				<h2>Batu Catur, Girimukti</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-11500="display:block;opacity: 0;left:-100%;"
+			data-12000="opacity: 1;left:-50%;"
+			data-12500="opacity: 1;left:-50%;"  
+			data-12750="opacity: 0;left:-100%;display:none;" >
+				<p>Batu yang mirip dengan bidak catur ini terdapat
+					 di Desa Girimukti. Batuan ini terbentuk 
+					 dari andesit lava yang telah mengalami 
+					 erosi dan pelapukan sehingga membentuk 
+					 seperti bidak catur.  Arkeolog menyebut 
+					 batu mirip bidak catur yang ditemukan warga 
+					 merupakan artefak. Usia batu tersebut 
+					 diperkirakan peninggalan budaya Hindu atau 
+					 Buddha pasca-abad 5 Masehi.</p>
+			</div>
+
+			<img src="vi-asset-map-image-curug-mawur.jpg"
+				data-="display:none;"	
+				data-13000="
+					display:block;			
+					opacity: 0;left:-100%;"
+				data-13500="		 
+					opacity: 1;left:-50%;"
+				data-14000="	   
+					opacity: 1;left:-50%;"  
+				data-14250="	 
+					opacity: 0;   
+					display:none;left:-100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-13000="display:block;opacity: 0;left:100%;"
+			data-13500="opacity: 1;left:50%;"
+			data-14000="opacity: 1;left:50%;"  
+			data-14250="opacity: 0;left:100%;display:none;" >
+				<h2>View Point Curug Mawur</h2>
+			</div>
+			<div class="text-desc"
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-13000="display:block;opacity: 0;left:100%;"
+			data-13500="opacity: 1;left:50%;"
+			data-14000="opacity: 1;left:50%;"  
+			data-14250="opacity: 0;left:100%;display:none;" >
+				<p></p>
+			</div>
+
+			<img src="vi-asset-map-image-curug-larangan.jpg"
+				data-="display:none;"	
+				data-14500="
+					display:block;			
+					opacity: 0;left:100%;"
+				data-15000="		 
+					opacity: 1;left:50%;"
+				data-15500="	   
+					opacity: 1;left:50%;"  
+				data-15750="	 
+					opacity: 0;   
+					display:none;left:100%;" 
+			>
+			<div class="text-title"
+			style="margin-top:8%;"
+			data-="display:none;"	
+			data-14500="display:block;opacity: 0;left:-100%;"
+			data-15000="opacity: 1;left:-50%;"
+			data-15500="opacity: 1;left:-50%;"  
+			data-15750="opacity: 0;left:-100%;display:none;" >
+				<h2>View Point Curug Larangan</h2>
+			</div>
+			<div class="text-desc"	
+			style="margin-top:20%;"
+			data-="display:none;"	
+			data-14500="display:block;opacity: 0;left:-100%;"
+			data-15000="opacity: 1;left:-50%;"
+			data-15500="opacity: 1;left:-50%;"  
+			data-15750="opacity: 0;left:-100%;display:none;" >
+				<p>Batu yang mirip dengan bidak catur ini terdapat 
+					di Desa Girimukti. Batuan ini terbentuk dari 
+					andesit lava yang telah mengalami erosi dan 
+					pelapukan sehingga membentuk seperti bidak 
+					catur.  Arkeolog menyebut batu mirip bidak 
+					catur yang ditemukan warga merupakan artefak. 
+					Usia batu tersebut diperkirakan peninggalan 
+					budaya Hindu atau Buddha pasca-abad 5 Masehi.</p>
+			</div>
+		</div>
+	</section>
+	<section class="s2"	
+	data-0="display:none;bottom:-100%;"
+	data-16500="display:flex;bottom:-100%;"
+	data-18500="display:flex;bottom:0%;"
+	data-23000="opacity:1;"
+	data-24000="display:none;opacity:0;">
+		<div class="transition t2"
+			data-18500="bottom:-10%;"
+			data-20000="bottom:90%;"
+			data-22500="bottom:90%;"
+			data-23000="bottom:150%;"
+			>
+			<img src="vi-asset-2d-jungle-transition.png"/>
+		</div>
+		<div class="transition t1"
+			data-18500="bottom:0%;"
+			data-20000="bottom:100%;"
+			>
+			<img src="assets/2D/clouda-transition.png">
+		</div>
+		<div class="content-wrapper"
+		data-18500="bottom:-100%;"
+		data-20000="bottom:0%;">
+			<img src="vi-asset-2d-jungle-bg-3.png" 
+				class=""
+				data-22000="bottom:0%;"
+				data-23000="bottom:100%;">
+			<img src="vi-asset-2d-jungle-bg-2.png" 
+				class=""
+				data-22000="bottom:0%;"
+				data-23000="bottom:-75%;">
+			<img src="vi-asset-2d-jungle-tree-left.png" 
+				class="jungle-tree-left"
+				data-22500="left:0%;"
+				data-23500="left:-100%;">
+			<img src="vi-asset-2d-jungle-tree-right.png" 
+				class="jungle-tree-right"
+				data-22500="right:0%;"
+				data-23500="right:-100%;">
+			<img src="vi-asset-2d-jungle-laef-1.png" 
+				class="jlaef obj1"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-laef-2.png" 
+				class="jlaef obj2"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-laef-3.png" 
+				class="jlaef obj3"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-laef-1.png" 
+				class="jleaf2 obj1"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-laef-2.png" 
+				class="jleaf2 obj2"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-laef-3.png" 
+				class="jleaf2 obj3"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-laef-1.png" 
+				class="jleaf2 obj31"
+				data-22000="opacity:1;"
+				data-22500="opacity:0;">
+			<img src="vi-asset-2d-jungle-bg-1.png" 
+				class=""
+				data-22500="bottom:0%;"
+				data-23000="bottom:-50%;">
+			<div class="text-title"
+				style="top:25%;"
+					data-0="display:none;"	
+					data-20500="display:block;opacity: 0;left:25%;"
+					data-21000="opacity: 1;left:43%;"
+					data-21500="opacity: 1;left:43%;"  
+					data-22000="opacity: 1;left:43%;"  
+					data-22500="opacity: 0;left:25%;" >
+				<h2>Geopark </h2>
+			</div>
+			<div class="text-title"
+				style="top:25%;"
+					data-0="display:none;"	
+					data-20500="display:block;opacity: 0;left:70%;"
+					data-21000="opacity: 1;left:50%;"
+					data-21500="opacity: 1;left:50%;"  
+					data-22000="opacity: 1;left:50%;"  
+					data-22500="opacity: 0;left:70%;" >
+				<h2> ciletuh</h2>
+			</div>
+		</div>
+	</section>
+	<section class="s3"
+		data-0="display:none;opacity:0;"
+		data-23000="display:block;opacity:0;"
+		data-24000="opacity:1;"
+		data-30000="opacity:1;"
+		data-31000="opacity:0;display:none;">
+		<div class="forest-wrapper">
+			<!-- forest mountain -->
+			<img src="vi-asset-2d-forest-mountain-bg.png"
+				style="left: 20%;"
+				data-0="display:none;"
+				data-24500="display:block;bottom: -55%;"
+				data-25200="bottom: 25%;"
+				data-28000="bottom: 25%;"
+				data-29500="bottom: -55%;">
+			<img src="vi-asset-2d-forest-mountain-left.png"
+				style="left: 0%;"
+				data-0="display:none;"
+				data-24500="display:block;bottom: -65%;"
+				data-25500="bottom: 15%;"
+				data-28500="bottom: 15%;"
+				data-30000="bottom: -65%;">
+			<img src="vi-asset-2d-forest-mountain-right.png"
+				style="right: -15%;"
+				data-0="display:none;"
+				data-24500="display:block;bottom: -65%;"
+				data-25200="bottom: 15%;"
+				data-28700="bottom: 15%;"
+				data-29800="bottom: -65%;">
+			<img src="vi-asset-2d-forest-mountain-mid.png"
+				style="right: 15%;"
+				data-0="display:none;"
+				data-24000="display:block;bottom: -65%;"
+				data-25300="bottom: 10%;"
+				data-28800="bottom: 10%;"
+				data-29500="bottom: -65%;">
+			<!-- cloud -->
+			<img src="vi-asset-2d-forest-cloud-1.png"
+				class="forest-cloud-1"
+				data-0="display:none;"
+				data-25000="display:block;"
+				data-28000="opacity:1;"
+				data-29000="opacity:0;">
+			<img src="vi-asset-2d-forest-cloud-left.png"
+				class="forest-cloud-2"
+				data-0="display:none;opacity:0;"
+				data-25000="display:block;"
+				data-28000="opacity:1;"
+				data-29000="opacity:0;">
+			<img src="vi-asset-2d-forest-cloud-right.png"
+				class="forest-cloud-3"
+				data-0="display:none;"
+				data-25000="display:block;"
+				data-28000="opacity:1;"
+				data-29000="opacity:0;">
+			<img src="vi-asset-2d-forest-cloud-1.png"
+				class="forest-cloud-4"
+				data-0="display:none;"
+				data-25000="display:block;"
+				data-28000="opacity:1;"
+				data-29000="opacity:0;">
+			<img src="vi-asset-2d-forest-cloud-left.png"
+				class="forest-cloud-5"
+				data-0="display:none;"
+				data-25000="display:block;"
+				data-28000="opacity:1;"
+				data-29000="opacity:0;">
+			<img src="vi-asset-2d-forest-cloud-right.png"
+				class="forest-cloud-6"
+				data-0="display:none;"
+				data-25000="display:block;"
+				data-28000="opacity:1;"
+				data-29000="opacity:0 !important;">
+			<!-- forest tree -->
+			<img src="vi-asset-2d-forest-tree-bg.png"
+				data-0="display:none;"
+				data-24200="display:block;bottom: -90%;"
+				data-25000="bottom: 0%;"
+				data-28200="bottom: 0%;"
+				data-29400="bottom: -100%;">
+			<img src="vi-asset-2d-forest-tree-left-1.png"
+				style="bottom: -10%;"
+				data-0="display:none;"
+				data-24000="display:block;left: -45%;"
+				data-25000="left: 5%;"
+				data-28400="left: 5%;"
+				data-29800="left: -45%;">
+			<img src="vi-asset-2d-forest-tree-left-2.png"
+				style="bottom: -10%;"
+				data-0="display:none;"
+				data-24500="display:block;left: -50%;"
+				data-25300="left: 0%;"
+				data-28100="left: 0%;"
+				data-29500="left: -50%;">
+			<img src="vi-asset-2d-forest-tree-bg.png"
+			class="t-on">
+			<!-- forest ground -->
+			<img src="vi-asset-2d-forest-big-ground-mid.png"
+				style="width: 110%;"
+				data-0="display:none;"
+				data-24500="display:block;bottom: -50%;"
+				data-25800="bottom: 0%;"
+				data-28600="bottom: 0%;"
+				data-29600="bottom: -50%;">
+			<img src="vi-asset-2d-forest-small-ground-mid.png"
+				data-0="display:none;"
+				data-24200="display:block;bottom: -50%;"
+				data-25300="bottom: 0%;"
+				data-28900="bottom: 0%;"
+				data-29900="bottom: -50%;">
+			<img src="vi-asset-2d-forest-ground-left.png"
+				style="bottom: 0%;"
+				data-0="display:none;"
+				data-24900="display:block;left: -50%;"
+				data-25500="left: 0%;"
+				data-28400="left: 0%;"
+				data-29200="left: -60%;">
+			<img src="vi-asset-2d-forest-ground-right.png"
+				style="bottom: 0%;"
+				data-0="display:none;"
+				data-25000="display:block;right: -50%;"
+				data-25600="right: 0%;"
+				data-28400="right: 0%;"
+				data-29600="right: -50%;">
+				<!-- forest tree -->
+				<img src="vi-asset-2d-forest-tree-right.png"
+					data-0="display:none;"
+					data-24800="display:block;right: -60%;"
+					data-25900="right: -10%;"
+					data-28300="right: -10%;"
+					data-29900="right: -60%;">
+				<img src="vi-asset-2d-forest-tree-left-1.png"
+					style="bottom: -10%;"
+					data-0="display:none;"
+					data-24300="display:block;right: -40%;"
+					data-25600="right: 10%;"
+					data-28000="right: 10%;"
+					data-29200="right: -40%;">
+			<img src="vi-asset-2d-forest-ground-mid.png"
+				data-0="display:none;"
+				data-24900="display:block;bottom: -50%;"
+				data-25900="bottom: 0%;"
+				data-29000="bottom: 0%;"
+				data-29800="bottom: -50%;">
+			<div class="text-title"
+			style="bottom: 0%; bottom: 25%;"
+			data-="display:none;"	
+			data-26000="display:block;opacity: 0;left:30%;"
+			data-26500="opacity: 1;left:20%;"
+			data-27000="opacity: 1;left:20%;" 
+			data-27500="opacity: 0;left:30%;display:none;" >
+				<h2>View Point Pamoyanan, Mekarjaya</h2>
+			</div>
+			<div class="text-desc"
+			style="width:25%; padding-right:40px; bottom: 5%;"
+			data-="display:none;"	
+			data-26000="display:block;opacity: 0;left:30%;"
+			data-26500="opacity: 1;left:20%;"
+			data-27000="opacity: 1;left:20%;"  
+			data-27500="opacity: 0;left:30%;display:none;" >
+				<p>Bagian selatan geopark  ciletuh memiliki 
+					bentang alam yang sangat unik dan langka,
+					yaitu berupa bentuk daratan tinggi dengan 
+					lembah berbentuk tapal kuda yang terbuka 
+					ke arah laut sehingga membentuk seperti 
+					panggung alam (amfiteater)
+				</p>
+			</div>
+
+		</div>
+	</section>
+	<section class="s4"
+	data-0="display:none;opacity:0;"
+	data-30000="display:block;opacity:0;"
+	data-31000="opacity:1;"
+	data-37000="opacity:1;"
+	data-38000="opacity:0;display:none;">
+		<div class="water-fall-wrapper">
+			<!-- water  -->
+			<img src="vi-asset-2d-water-fall-water.png"
+				style="width: 100%;"
+				data-0="display:none;"
+				data-31000="display:block;bottom: -50%;"
+				data-32000="bottom: 0%;"
+				data-36000="bottom: 0%;"
+				data-37000="bottom: -50%;">
+			<div
+				data-35000="opacity: 1;"
+				data-36000="opacity: 0;">
+				<img src="vi-asset-2d-water-fall-water.png"
+					class="wf-water"
+					style="width: 100%;"
+					data-0="display:none;"
+					data-32000="display:block;opacity:0"
+					data-33000="opacity:1">
+			</div>
+			<!-- water fall -->
+			<img src="vi-asset-2d-water-fall-left.png"
+				style="bottom: 0%;width: 50%;"
+				data-0="display:none;"
+				data-31500="display:block;left: -50%;"
+				data-32600="left: 0%;"
+				data-35600="left: 0%;"
+				data-36700="left: -50%;">
+			<img src="vi-asset-2d-water-fall-right.png"
+				style="bottom: 0%;width: 50%;"
+				data-0="display:none;"
+				data-31800="display:block;right: -50%;"
+				data-32700="right: 0%;"
+				data-35900="right: 0%;"
+				data-36800="right: -50%;">
+			<img src="vi-asset-2d-water-fall-main.png"
+				class=""
+				style="width: 100%;"
+				data-0="display:none;"
+				data-31000="display:block;bottom: -55%;"
+				data-32000="bottom: 30%;"
+				data-36000="bottom: 30%;"
+				data-37000="bottom: -55%;">
+			<!-- water leaf r -->
+			<img src="vi-asset-2d-water-fall-leaf-3.png"
+				style="top: 0%;height: 70%;"
+				data-0="display:none;"
+				data-32000="display:block;right: -50%;"
+				data-33000="right: 0%;"
+				data-36200="right: 0%;"
+				data-36900="right: -50%;">
+			<img src="vi-asset-2d-water-fall-leaf-6.png"
+				style="bottom: 0%;height: 40%;"
+				data-0="display:none;"
+				data-31700="display:block;right: -50%;"
+				data-32300="right: 0%;"
+				data-35100="right: 0%;"
+				data-36200="right: -50%;">
+			<img src="vi-asset-2d-water-fall-leaf-2.png"
+				style="bottom: 0%; height: 50%;"
+				data-0="display:none;"
+				data-32000="display:block;right: -50%;"
+				data-33000="right: 0%;"
+				data-35300="right: 0%;"
+				data-36000="right: -50%;">
+			<img src="vi-asset-2d-water-fall-leaf-1.png"
+				style="top: 0%;height: 80%;"
+				data-0="display:none;"
+				data-31900="display:block;right: -50%;"
+				data-32900="right: 0%;"
+				data-35800="right: 0%;"
+				data-36700="right: -50%;">
+				<!-- water leaf l -->
+			<img src="vi-asset-2d-water-fall-leaf-5.png"
+				style="bottom: 25%; height: 50%;"
+				data-0="display:none;"
+				data-31800="display:block;left: -50%;"
+				data-32700="left: 0%;"
+				data-35900="left: 0%;"
+				data-36900="left: -50%;">
+			<img src="vi-asset-2d-water-fall-leaf-4.png"
+				style="bottom: 25%; height: 50%;"
+				data-0="display:none;"
+				data-31300="display:block;left: -50%;"
+				data-32600="left: 0%;"
+				data-35300="left: 0%;"
+				data-36500="left: -50%;">
+			<div class="text-title"
+			style="bottom: 0%; bottom: 30%;"
+			data-="display:none;"	
+			data-33000="display:block;opacity: 0;left:30%;"
+			data-33500="opacity: 1;left:20%;"
+			data-34000="opacity: 1;left:20%;" 
+			data-34500="opacity: 0;left:30%;display:none;" >
+				<h2>View Point Curug Larangan</h2>
+			</div>
+			<div class="text-desc"
+			style="width:30%; padding-right:40px; bottom: 5%;"
+			data-="display:none;"	
+			data-33000="display:block;opacity: 0;left:30%;"
+			data-33500="opacity: 1;left:20%;"
+			data-34000="opacity: 1;left:20%;"  
+			data-34500="opacity: 0;left:30%;display:none;" >
+				<p>Batu yang mirip dengan bidak catur ini terdapat di Desa Girimukti. 
+					Batuan ini terbentuk dari andesit lava yang telah mengalami erosi 
+					dan pelapukan sehingga membentuk seperti bidak catur.  Arkeolog 
+					menyebut batu mirip bidak catur yang ditemukan warga merupakan artefak. 
+					Usia batu tersebut diperkirakan peninggalan budaya Hindu atau Buddha 
+					pasca-abad 5 Masehi.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="s5"
+	data-0="display:none;opacity:0;"
+	data-37000="display:block;opacity:0;"
+	data-38000="opacity:1;"
+	data-44000="opacity:1;"
+	data-45000="opacity:0;display:none;">
+		<div class="cave-wrapper">
+			<!-- cave bg -->
+			<img src="vi-asset-2d-cave-stone-bg-bottom.png"
+				style="width: 100%;"
+				data-0="display:none;"
+				data-38200="display:block;bottom: -50%; "
+				data-39300="bottom: 0%; "
+				data-42200="bottom: 0%; "
+				data-43300="bottom: -60%; ">
+			<img src="vi-asset-2d-cave-stone-bg-top.png"
+				style="top: 0%; width: 100%;"
+				data-0="display:none;"
+				data-38800="display:block;top: -50%;opacity:0;"
+				data-39700="top: 0%;opacity:1;"
+				data-43000="top: 0%;opacity:1;"
+				data-44000="top: -50%;opacity:0;">
+			<img src="vi-asset-2d-cave-stone-bg-left.png"
+				style="bottom: 0%; height: 100%;"
+				data-0="display:none;"
+				data-38700="display:block;left:-50%;"
+				data-39900="left:0%;"
+				data-42800="left: 0%; "
+				data-43700="left: -50%; ">
+			<img src="vi-asset-2d-cave-stone-bg-right.png"
+				style="bottom: 0%;height: 100%;"
+				data-0="display:none;"
+				data-38200="display:block; right: -50%; "
+				data-39300=" right: 0%; "
+				data-42900="right: 0%; "
+				data-43800="right: -50%; ">
+			<!-- cave groudn -->
+			<img src="vi-asset-2d-cave-stone-ground.png"
+				style=" width: 100%;"
+				data-0="display:none;"
+				data-39000="display:block;bottom: -50%;"
+				data-40000="bottom: 0%;"
+				data-43000="bottom: 0%; "
+				data-44000="bottom: -50%; ">
+			<!-- cave stone -->
+			<img src="vi-asset-2d-cave-tiger.png"
+				style="bottom: 0%;right: 10%; "
+				data-0="display:none;"
+				data-39500="display:block;opacity: 0;right: 0%; "
+				data-41000="opacity: 1;right: 10%; "
+				data-42400="right: 0%;opacity: 1;"
+				data-43700="right: 10%;opacity: 0;">
+			<img src="vi-asset-2d-cave-stone-left.png"
+				style="bottom: 0%; height: 100%;"
+				data-0="display:none;"
+				data-38900="display:block;left: -50%; "
+				data-39800="left: 0%; "
+				data-42200="left: 0%; "
+				data-43300="left: -50%; ">
+			<img src="vi-asset-2d-cave-stone-right.png"
+				style="bottom: 0%; height: 100%;"
+				data-0="display:none;"
+				data-38800="display:block;right: -50%; "
+				data-39900="right: 0%; "
+				data-42800="right: 0%; "
+				data-43600="right: -50%; ">
+			<div class="text-title"
+			style="bottom: 0%; bottom: 30%;"
+			data-="display:none;"	
+			data-40000="display:block;opacity: 0;left:30%;"
+			data-40500="opacity: 1;left:20%;"
+			data-41000="opacity: 1;left:20%;" 
+			data-41500="opacity: 0;left:30%;display:none;" >
+				<h2>View Point Goa meong</h2>
+			</div>
+			<div class="text-desc"
+			style="width:30%; padding-right:40px; bottom: 5%;"
+			data-="display:none;"	
+			data-40000="display:block;opacity: 0;left:30%;"
+			data-40500="opacity: 1;left:20%;"
+			data-41000="opacity: 1;left:20%;"  
+			data-41500="opacity: 0;left:30%;display:none;" >
+				<p>goa meong sangat luas dan kondisi didalamnya sangat gelap.
+				Namun , ada pancaran sinar matahari dari salah satu lubang yang ada di langit-langit ,
+				hal ini memiliki keindahannya sendiri. 
+				Konon, goa ini adalah tempat tinggal meong (macan),
+				karena dahulu sering ditemukan tulang berulang babi bekas makan meong tersebut.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="s6"
+		data-0="display:none;opacity:0;"
+		data-44000="display:block;opacity:0;"
+		data-45000="opacity:1;">
+		<div class="m-hill-wrapper">
+			<img src="vi-asset-2d-m-hill-sun.png"
+				style="top: 5%; right: -5%; height:70%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			<img src="vi-asset-2d-m-hill-mist.png"
+				style="bottom: 0%;  left: -5%; width: 110%;"
+				data-0="display:none;"
+				data-45200="display:block;opacity: 0;"
+				data-46600="opacity: 1;">
+			<!-- cloud -->
+			<div>
+			<img src="vi-asset-2d-m-hill-cloud-1.png"
+				class="m-hill-cloud-1"
+				style="top: 5%; height: 20%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			<img src="vi-asset-2d-m-hill-cloud-2.png"
+				class="m-hill-cloud-2"
+				style="top: 28%; height: 10%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			<img src="vi-asset-2d-m-hill-cloud-3.png"
+				class="m-hill-cloud-3"
+				style="top: 10%; height: 15%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			<img src="vi-asset-2d-m-hill-cloud-1.png"
+				class="m-hill-cloud-4"
+				style="top: 20%; height: 20%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			<img src="vi-asset-2d-m-hill-cloud-2.png"
+				class="m-hill-cloud-5"
+				style="top: 26%; height: 10%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			<img src="vi-asset-2d-m-hill-cloud-3.png"
+				class="m-hill-cloud-6"
+				style="top: 15%; height: 10%;"
+				data-0="display:none;"
+				data-45000="display:block;opacity: 0;"
+				data-46000="opacity: 1;">
+			</div>
+			<!-- mountain -->
+			<img src="vi-asset-2d-m-hill-mountain-1.png"
+				style="right: 0%;width: 50%;"
+				data-0="display:none;"
+				data-45700="display:block;bottom: -30%; "
+				data-46600="bottom: 20%;">
+			<img src="vi-asset-2d-m-hill-mountain-tree.png"
+				style="right:0%; width: 80%;"
+				data-0="display:none;"
+				data-45900="display:block;bottom: -40%;  "
+				data-46700="bottom: 10%;  ">
+			<img src="vi-asset-2d-m-hill-mountain-2.png"
+				style="right: 0%;  width: 80%;"
+				data-0="display:none;"
+				data-45600="display:block; bottom: -40%; "
+				data-46700="bottom: 10%; ">
+			<!-- water -->
+			<img src="vi-asset-2d-m-hill-water.png"
+				style="right:0%;width: 75%;"
+				data-0="display:none;"
+				data-45000="display:block;bottom: -60%;"
+				data-46300="bottom: -10%;">
+			<!-- hill -->
+			<img src="vi-asset-2d-m-hill-man-2.png"
+				style="bottom: 30%; height:20%;"
+				data-0="display:none;"
+				data-47000="display:block;left:24%;opacity:0;"
+				data-47500="opacity:1;left:29%;">
+			<img src="vi-asset-2d-m-hill-cliff.png"
+				style="left: 0%;height:50%;"
+				data-0="display:none;"
+				data-45700="display:block;bottom: -50%; "
+				data-46800="bottom: 0%; ">
+			<img src="vi-asset-2d-m-hill-man-1.png"
+				style="bottom: 30%; height:50%;"
+				data-0="display:none;"
+				data-47000="display:block;left:20%;opacity:0;"
+				data-47500="left:25%;opacity:1;">
+			<!-- leaf -->
+			<img src="vi-asset-2d-m-hill-leaf-1.png"
+				style="right:10%;bottom: 0%;width:80%;"
+				data-0="display:none;"
+				data-45800="display:block;bottom: -50%; "
+				data-46900="bottom: 0%; ">
+			<img src="vi-asset-2d-m-hill-leaf-2.png"
+				style="bottom: 0%; height:50%;"
+				data-0="display:none;"
+				data-45300="display:block;left: -55%; "
+				data-46800="left: -3%; ">
+			<img src="vi-asset-2d-m-hill-leaf-3.png"
+				style="bottom: 0%; height:50%;"
+				data-0="display:none;"
+				data-45200="display:block;right: -55%; "
+				data-46600="right:-3%; ">
+
+				<div class="text-title"
+				style="top: 5%;"
+				data-="display:none;"	
+				data-48000="display:block;opacity: 0;right:30%;"
+				data-48500="opacity: 1;right:10%;">
+					<img src="vi-asset-2d-logo.png"
+					style=" height: 100%; padding-left:200px; ">
+					<h2>Geopark ciletuh</h2>
+				</div>
+				<div class="text-desc"
+				style="width:30%; padding-right:40px; top: 15%;"
+				data-="display:none;"	
+				data-48000="display:block;opacity: 0;right:30%;"
+				data-48500="opacity: 1;right:10%;" >
+					<p>
+						Tertarik pergi wisata ke ciletuh ? </br>
+						Bagikan link ini dengan :
+					</br>
+					</br>
+					<!-- Twitter (url, text, @mention) -->
+					<a href="https://twitter.com/share?url=https://icons8.com">
+						<img src="icons8-twitter-circled-50.png"
+							style=" height: 50px;">
+					</a>
+					<!-- Facebook (url) -->
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://icons8.com">
+						<img src="icons8-facebook-circled-50.png"
+							style=" height: 50px;">
+					</a>
+
+					</p>
+				</div>
+		</div>
+	</section>
+	<div style="height:50000px;"></div>
+	<script type="text/javascript">
+/*!
+ * skrollr core
+ *
+ * Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr
+ *
+ * Free to use under terms of MIT license
+ */
+ (function(window, document, undefined) {
+	'use strict';
+
+	/*
+	 * Global api.
+	 */
+	var skrollr = {
+		get: function() {
+			return _instance;
+		},
+		//Main entry point.
+		init: function(options) {
+			return _instance || new Skrollr(options);
+		},
+		VERSION: '0.6.26'
+	};
+
+	//Minify optimization.
+	var hasProp = Object.prototype.hasOwnProperty;
+	var Math = window.Math;
+	var getStyle = window.getComputedStyle;
+
+	//They will be filled when skrollr gets initialized.
+	var documentElement;
+	var body;
+
+	var EVENT_TOUCHSTART = 'touchstart';
+	var EVENT_TOUCHMOVE = 'touchmove';
+	var EVENT_TOUCHCANCEL = 'touchcancel';
+	var EVENT_TOUCHEND = 'touchend';
+
+	var SKROLLABLE_CLASS = 'skrollable';
+	var SKROLLABLE_BEFORE_CLASS = SKROLLABLE_CLASS + '-before';
+	var SKROLLABLE_BETWEEN_CLASS = SKROLLABLE_CLASS + '-between';
+	var SKROLLABLE_AFTER_CLASS = SKROLLABLE_CLASS + '-after';
+
+	var SKROLLR_CLASS = 'skrollr';
+	var NO_SKROLLR_CLASS = 'no-' + SKROLLR_CLASS;
+	var SKROLLR_DESKTOP_CLASS = SKROLLR_CLASS + '-desktop';
+	var SKROLLR_MOBILE_CLASS = SKROLLR_CLASS + '-mobile';
+
+	var DEFAULT_EASING = 'linear';
+	var DEFAULT_DURATION = 500;//ms
+	var DEFAULT_MOBILE_DECELERATION = 0.001;//pixel/ms²
+
+	var DEFAULT_SMOOTH_SCROLLING_DURATION = 1000;//ms
+
+	var ANCHOR_START = 'start';
+	var ANCHOR_END = 'end';
+	var ANCHOR_CENTER = 'center';
+	var ANCHOR_BOTTOM = 'bottom';
+
+	//The property which will be added to the DOM element to hold the ID of the skrollable.
+	var SKROLLABLE_ID_DOM_PROPERTY = '___skrollable_id';
+
+	var rxTouchIgnoreTags = /^(?:input|textarea|button|select)$/i;
+
+	var rxTrim = /^\s+|\s+$/g;
+
+	//Find all data-attributes. data-[_constant]-[offset]-[anchor]-[anchor].
+	var rxKeyframeAttribute = /^data(?:-(_\w+))?(?:-?(-?\d*\.?\d+p?))?(?:-?(start|end|top|center|bottom))?(?:-?(top|center|bottom))?$/;
+
+	var rxPropValue = /\s*(@?[\w\-\[\]]+)\s*:\s*(.+?)\s*(?:;|$)/gi;
+
+	//Easing function names follow the property in square brackets.
+	var rxPropEasing = /^(@?[a-z\-]+)\[(\w+)\]$/;
+
+	var rxCamelCase = /-([a-z0-9_])/g;
+	var rxCamelCaseFn = function(str, letter) {
+		return letter.toUpperCase();
+	};
+
+	//Numeric values with optional sign.
+	var rxNumericValue = /[\-+]?[\d]*\.?[\d]+/g;
+
+	//Used to replace occurences of {?} with a number.
+	var rxInterpolateString = /\{\?\}/g;
+
+	//Finds rgb(a) colors, which don't use the percentage notation.
+	var rxRGBAIntegerColor = /rgba?\(\s*-?\d+\s*,\s*-?\d+\s*,\s*-?\d+/g;
+
+	//Finds all gradients.
+	var rxGradient = /[a-z\-]+-gradient/g;
+
+	//Vendor prefix. Will be set once skrollr gets initialized.
+	var theCSSPrefix = '';
+	var theDashedCSSPrefix = '';
+
+	//Will be called once (when skrollr gets initialized).
+	var detectCSSPrefix = function() {
+		//Only relevant prefixes. May be extended.
+		//Could be dangerous if there will ever be a CSS property which actually starts with "ms". Don't hope so.
+		var rxPrefixes = /^(?:O|Moz|webkit|ms)|(?:-(?:o|moz|webkit|ms)-)/;
+
+		//Detect prefix for current browser by finding the first property using a prefix.
+		if(!getStyle) {
+			return;
+		}
+
+		var style = getStyle(body, null);
+
+		for(var k in style) {
+			//We check the key and if the key is a number, we check the value as well, because safari's getComputedStyle returns some weird array-like thingy.
+			theCSSPrefix = (k.match(rxPrefixes) || (+k == k && style[k].match(rxPrefixes)));
+
+			if(theCSSPrefix) {
+				break;
+			}
+		}
+
+		//Did we even detect a prefix?
+		if(!theCSSPrefix) {
+			theCSSPrefix = theDashedCSSPrefix = '';
+
+			return;
+		}
+
+		theCSSPrefix = theCSSPrefix[0];
+
+		//We could have detected either a dashed prefix or this camelCaseish-inconsistent stuff.
+		if(theCSSPrefix.slice(0,1) === '-') {
+			theDashedCSSPrefix = theCSSPrefix;
+
+			//There's no logic behind these. Need a look up.
+			theCSSPrefix = ({
+				'-webkit-': 'webkit',
+				'-moz-': 'Moz',
+				'-ms-': 'ms',
+				'-o-': 'O'
+			})[theCSSPrefix];
+		} else {
+			theDashedCSSPrefix = '-' + theCSSPrefix.toLowerCase() + '-';
+		}
+	};
+
+	var polyfillRAF = function() {
+		var requestAnimFrame = window.requestAnimationFrame || window[theCSSPrefix.toLowerCase() + 'RequestAnimationFrame'];
+
+		var lastTime = _now();
+
+		if(_isMobile || !requestAnimFrame) {
+			requestAnimFrame = function(callback) {
+				//How long did it take to render?
+				var deltaTime = _now() - lastTime;
+				var delay = Math.max(0, 1000 / 60 - deltaTime);
+
+				return window.setTimeout(function() {
+					lastTime = _now();
+					callback();
+				}, delay);
+			};
+		}
+
+		return requestAnimFrame;
+	};
+
+	var polyfillCAF = function() {
+		var cancelAnimFrame = window.cancelAnimationFrame || window[theCSSPrefix.toLowerCase() + 'CancelAnimationFrame'];
+
+		if(_isMobile || !cancelAnimFrame) {
+			cancelAnimFrame = function(timeout) {
+				return window.clearTimeout(timeout);
+			};
+		}
+
+		return cancelAnimFrame;
+	};
+
+	//Built-in easing functions.
+	var easings = {
+		begin: function() {
+			return 0;
+		},
+		end: function() {
+			return 1;
+		},
+		linear: function(p) {
+			return p;
+		},
+		quadratic: function(p) {
+			return p * p;
+		},
+		cubic: function(p) {
+			return p * p * p;
+		},
+		swing: function(p) {
+			return (-Math.cos(p * Math.PI) / 2) + 0.5;
+		},
+		sqrt: function(p) {
+			return Math.sqrt(p);
+		},
+		outCubic: function(p) {
+			return (Math.pow((p - 1), 3) + 1);
+		},
+		//see https://www.desmos.com/calculator/tbr20s8vd2 for how I did this
+		bounce: function(p) {
+			var a;
+
+			if(p <= 0.5083) {
+				a = 3;
+			} else if(p <= 0.8489) {
+				a = 9;
+			} else if(p <= 0.96208) {
+				a = 27;
+			} else if(p <= 0.99981) {
+				a = 91;
+			} else {
+				return 1;
+			}
+
+			return 1 - Math.abs(3 * Math.cos(p * a * 1.028) / a);
+		}
+	};
+
+	/**
+	 * Constructor.
+	 */
+	function Skrollr(options) {
+		documentElement = document.documentElement;
+		body = document.body;
+
+		detectCSSPrefix();
+
+		_instance = this;
+
+		options = options || {};
+
+		_constants = options.constants || {};
+
+		//We allow defining custom easings or overwrite existing.
+		if(options.easing) {
+			for(var e in options.easing) {
+				easings[e] = options.easing[e];
+			}
+		}
+
+		_edgeStrategy = options.edgeStrategy || 'set';
+
+		_listeners = {
+			//Function to be called right before rendering.
+			beforerender: options.beforerender,
+
+			//Function to be called right after finishing rendering.
+			render: options.render,
+
+			//Function to be called whenever an element with the `data-emit-events` attribute passes a keyframe.
+			keyframe: options.keyframe
+		};
+
+		//forceHeight is true by default
+		_forceHeight = options.forceHeight !== false;
+
+		if(_forceHeight) {
+			_scale = options.scale || 1;
+		}
+
+		_mobileDeceleration = options.mobileDeceleration || DEFAULT_MOBILE_DECELERATION;
+
+		_smoothScrollingEnabled = options.smoothScrolling !== false;
+		_smoothScrollingDuration = options.smoothScrollingDuration || DEFAULT_SMOOTH_SCROLLING_DURATION;
+
+		//Dummy object. Will be overwritten in the _render method when smooth scrolling is calculated.
+		_smoothScrolling = {
+			targetTop: _instance.getScrollTop()
+		};
+
+		//A custom check function may be passed.
+		_isMobile = ((options.mobileCheck || function() {
+			return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+		})());
+
+		if(_isMobile) {
+			_skrollrBody = document.getElementById('skrollr-body');
+
+			//Detect 3d transform if there's a skrollr-body (only needed for #skrollr-body).
+			if(_skrollrBody) {
+				_detect3DTransforms();
+			}
+
+			_initMobile();
+			_updateClass(documentElement, [SKROLLR_CLASS, SKROLLR_MOBILE_CLASS], [NO_SKROLLR_CLASS]);
+		} else {
+			_updateClass(documentElement, [SKROLLR_CLASS, SKROLLR_DESKTOP_CLASS], [NO_SKROLLR_CLASS]);
+		}
+
+		//Triggers parsing of elements and a first reflow.
+		_instance.refresh();
+
+		_addEvent(window, 'resize orientationchange', function() {
+			var width = documentElement.clientWidth;
+			var height = documentElement.clientHeight;
+
+			//Only reflow if the size actually changed (#271).
+			if(height !== _lastViewportHeight || width !== _lastViewportWidth) {
+				_lastViewportHeight = height;
+				_lastViewportWidth = width;
+
+				_requestReflow = true;
+			}
+		});
+
+		var requestAnimFrame = polyfillRAF();
+
+		//Let's go.
+		(function animloop(){
+			_render();
+			_animFrame = requestAnimFrame(animloop);
+		}());
+
+		return _instance;
+	}
+
+	/**
+	 * (Re)parses some or all elements.
+	 */
+	Skrollr.prototype.refresh = function(elements) {
+		var elementIndex;
+		var elementsLength;
+		var ignoreID = false;
+
+		//Completely reparse anything without argument.
+		if(elements === undefined) {
+			//Ignore that some elements may already have a skrollable ID.
+			ignoreID = true;
+
+			_skrollables = [];
+			_skrollableIdCounter = 0;
+
+			elements = document.getElementsByTagName('*');
+		} else if(elements.length === undefined) {
+			//We also accept a single element as parameter.
+			elements = [elements];
+		}
+
+		elementIndex = 0;
+		elementsLength = elements.length;
+
+		for(; elementIndex < elementsLength; elementIndex++) {
+			var el = elements[elementIndex];
+			var anchorTarget = el;
+			var keyFrames = [];
+
+			//If this particular element should be smooth scrolled.
+			var smoothScrollThis = _smoothScrollingEnabled;
+
+			//The edge strategy for this particular element.
+			var edgeStrategy = _edgeStrategy;
+
+			//If this particular element should emit keyframe events.
+			var emitEvents = false;
+
+			//If we're reseting the counter, remove any old element ids that may be hanging around.
+			if(ignoreID && SKROLLABLE_ID_DOM_PROPERTY in el) {
+				delete el[SKROLLABLE_ID_DOM_PROPERTY];
+			}
+
+			if(!el.attributes) {
+				continue;
+			}
+
+			//Iterate over all attributes and search for key frame attributes.
+			var attributeIndex = 0;
+			var attributesLength = el.attributes.length;
+
+			for (; attributeIndex < attributesLength; attributeIndex++) {
+				var attr = el.attributes[attributeIndex];
+
+				if(attr.name === 'data-anchor-target') {
+					anchorTarget = document.querySelector(attr.value);
+
+					if(anchorTarget === null) {
+						throw 'Unable to find anchor target "' + attr.value + '"';
+					}
+
+					continue;
+				}
+
+				//Global smooth scrolling can be overridden by the element attribute.
+				if(attr.name === 'data-smooth-scrolling') {
+					smoothScrollThis = attr.value !== 'off';
+
+					continue;
+				}
+
+				//Global edge strategy can be overridden by the element attribute.
+				if(attr.name === 'data-edge-strategy') {
+					edgeStrategy = attr.value;
+
+					continue;
+				}
+
+				//Is this element tagged with the `data-emit-events` attribute?
+				if(attr.name === 'data-emit-events') {
+					emitEvents = true;
+
+					continue;
+				}
+
+				var match = attr.name.match(rxKeyframeAttribute);
+
+				if(match === null) {
+					continue;
+				}
+
+				var kf = {
+					props: attr.value,
+					//Point back to the element as well.
+					element: el,
+					//The name of the event which this keyframe will fire, if emitEvents is
+					eventType: attr.name.replace(rxCamelCase, rxCamelCaseFn)
+				};
+
+				keyFrames.push(kf);
+
+				var constant = match[1];
+
+				if(constant) {
+					//Strip the underscore prefix.
+					kf.constant = constant.substr(1);
+				}
+
+				//Get the key frame offset.
+				var offset = match[2];
+
+				//Is it a percentage offset?
+				if(/p$/.test(offset)) {
+					kf.isPercentage = true;
+					kf.offset = (offset.slice(0, -1) | 0) / 100;
+				} else {
+					kf.offset = (offset | 0);
+				}
+
+				var anchor1 = match[3];
+
+				//If second anchor is not set, the first will be taken for both.
+				var anchor2 = match[4] || anchor1;
+
+				//"absolute" (or "classic") mode, where numbers mean absolute scroll offset.
+				if(!anchor1 || anchor1 === ANCHOR_START || anchor1 === ANCHOR_END) {
+					kf.mode = 'absolute';
+
+					//data-end needs to be calculated after all key frames are known.
+					if(anchor1 === ANCHOR_END) {
+						kf.isEnd = true;
+					} else if(!kf.isPercentage) {
+						//For data-start we can already set the key frame w/o calculations.
+						//#59: "scale" options should only affect absolute mode.
+						kf.offset = kf.offset * _scale;
+					}
+				}
+				//"relative" mode, where numbers are relative to anchors.
+				else {
+					kf.mode = 'relative';
+					kf.anchors = [anchor1, anchor2];
+				}
+			}
+
+			//Does this element have key frames?
+			if(!keyFrames.length) {
+				continue;
+			}
+
+			//Will hold the original style and class attributes before we controlled the element (see #80).
+			var styleAttr, classAttr;
+
+			var id;
+
+			if(!ignoreID && SKROLLABLE_ID_DOM_PROPERTY in el) {
+				//We already have this element under control. Grab the corresponding skrollable id.
+				id = el[SKROLLABLE_ID_DOM_PROPERTY];
+				styleAttr = _skrollables[id].styleAttr;
+				classAttr = _skrollables[id].classAttr;
+			} else {
+				//It's an unknown element. Asign it a new skrollable id.
+				id = (el[SKROLLABLE_ID_DOM_PROPERTY] = _skrollableIdCounter++);
+				styleAttr = el.style.cssText;
+				classAttr = _getClass(el);
+			}
+
+			_skrollables[id] = {
+				element: el,
+				styleAttr: styleAttr,
+				classAttr: classAttr,
+				anchorTarget: anchorTarget,
+				keyFrames: keyFrames,
+				smoothScrolling: smoothScrollThis,
+				edgeStrategy: edgeStrategy,
+				emitEvents: emitEvents,
+				lastFrameIndex: -1
+			};
+
+			_updateClass(el, [SKROLLABLE_CLASS], []);
+		}
+
+		//Reflow for the first time.
+		_reflow();
+
+		//Now that we got all key frame numbers right, actually parse the properties.
+		elementIndex = 0;
+		elementsLength = elements.length;
+
+		for(; elementIndex < elementsLength; elementIndex++) {
+			var sk = _skrollables[elements[elementIndex][SKROLLABLE_ID_DOM_PROPERTY]];
+
+			if(sk === undefined) {
+				continue;
+			}
+
+			//Parse the property string to objects
+			_parseProps(sk);
+
+			//Fill key frames with missing properties from left and right
+			_fillProps(sk);
+		}
+
+		return _instance;
+	};
+
+	/**
+	 * Transform "relative" mode to "absolute" mode.
+	 * That is, calculate anchor position and offset of element.
+	 */
+	Skrollr.prototype.relativeToAbsolute = function(element, viewportAnchor, elementAnchor) {
+		var viewportHeight = documentElement.clientHeight;
+		var box = element.getBoundingClientRect();
+		var absolute = box.top;
+
+		//#100: IE doesn't supply "height" with getBoundingClientRect.
+		var boxHeight = box.bottom - box.top;
+
+		if(viewportAnchor === ANCHOR_BOTTOM) {
+			absolute -= viewportHeight;
+		} else if(viewportAnchor === ANCHOR_CENTER) {
+			absolute -= viewportHeight / 2;
+		}
+
+		if(elementAnchor === ANCHOR_BOTTOM) {
+			absolute += boxHeight;
+		} else if(elementAnchor === ANCHOR_CENTER) {
+			absolute += boxHeight / 2;
+		}
+
+		//Compensate scrolling since getBoundingClientRect is relative to viewport.
+		absolute += _instance.getScrollTop();
+
+		return (absolute + 0.5) | 0;
+	};
+
+	/**
+	 * Animates scroll top to new position.
+	 */
+	Skrollr.prototype.animateTo = function(top, options) {
+		options = options || {};
+
+		var now = _now();
+		var scrollTop = _instance.getScrollTop();
+
+		//Setting this to a new value will automatically cause the current animation to stop, if any.
+		_scrollAnimation = {
+			startTop: scrollTop,
+			topDiff: top - scrollTop,
+			targetTop: top,
+			duration: options.duration || DEFAULT_DURATION,
+			startTime: now,
+			endTime: now + (options.duration || DEFAULT_DURATION),
+			easing: easings[options.easing || DEFAULT_EASING],
+			done: options.done
+		};
+
+		//Don't queue the animation if there's nothing to animate.
+		if(!_scrollAnimation.topDiff) {
+			if(_scrollAnimation.done) {
+				_scrollAnimation.done.call(_instance, false);
+			}
+
+			_scrollAnimation = undefined;
+		}
+
+		return _instance;
+	};
+
+	/**
+	 * Stops animateTo animation.
+	 */
+	Skrollr.prototype.stopAnimateTo = function() {
+		if(_scrollAnimation && _scrollAnimation.done) {
+			_scrollAnimation.done.call(_instance, true);
+		}
+
+		_scrollAnimation = undefined;
+	};
+
+	/**
+	 * Returns if an animation caused by animateTo is currently running.
+	 */
+	Skrollr.prototype.isAnimatingTo = function() {
+		return !!_scrollAnimation;
+	};
+
+	Skrollr.prototype.isMobile = function() {
+		return _isMobile;
+	};
+
+	Skrollr.prototype.setScrollTop = function(top, force) {
+		_forceRender = (force === true);
+
+		if(_isMobile) {
+			_mobileOffset = Math.min(Math.max(top, 0), _maxKeyFrame);
+		} else {
+			window.scrollTo(0, top);
+		}
+
+		return _instance;
+	};
+
+	Skrollr.prototype.getScrollTop = function() {
+		if(_isMobile) {
+			return _mobileOffset;
+		} else {
+			return window.pageYOffset || documentElement.scrollTop || body.scrollTop || 0;
+		}
+	};
+
+	Skrollr.prototype.getMaxScrollTop = function() {
+		return _maxKeyFrame;
+	};
+
+	Skrollr.prototype.on = function(name, fn) {
+		_listeners[name] = fn;
+
+		return _instance;
+	};
+
+	Skrollr.prototype.off = function(name) {
+		delete _listeners[name];
+
+		return _instance;
+	};
+
+	Skrollr.prototype.destroy = function() {
+		var cancelAnimFrame = polyfillCAF();
+		cancelAnimFrame(_animFrame);
+		_removeAllEvents();
+
+		_updateClass(documentElement, [NO_SKROLLR_CLASS], [SKROLLR_CLASS, SKROLLR_DESKTOP_CLASS, SKROLLR_MOBILE_CLASS]);
+
+		var skrollableIndex = 0;
+		var skrollablesLength = _skrollables.length;
+
+		for(; skrollableIndex < skrollablesLength; skrollableIndex++) {
+			_reset(_skrollables[skrollableIndex].element);
+		}
+
+		documentElement.style.overflow = body.style.overflow = '';
+		documentElement.style.height = body.style.height = '';
+
+		if(_skrollrBody) {
+			skrollr.setStyle(_skrollrBody, 'transform', 'none');
+		}
+
+		_instance = undefined;
+		_skrollrBody = undefined;
+		_listeners = undefined;
+		_forceHeight = undefined;
+		_maxKeyFrame = 0;
+		_scale = 1;
+		_constants = undefined;
+		_mobileDeceleration = undefined;
+		_direction = 'down';
+		_lastTop = -1;
+		_lastViewportWidth = 0;
+		_lastViewportHeight = 0;
+		_requestReflow = false;
+		_scrollAnimation = undefined;
+		_smoothScrollingEnabled = undefined;
+		_smoothScrollingDuration = undefined;
+		_smoothScrolling = undefined;
+		_forceRender = undefined;
+		_skrollableIdCounter = 0;
+		_edgeStrategy = undefined;
+		_isMobile = false;
+		_mobileOffset = 0;
+		_translateZ = undefined;
+	};
+
+	/*
+		Private methods.
+	*/
+
+	var _initMobile = function() {
+		var initialElement;
+		var initialTouchY;
+		var initialTouchX;
+		var currentElement;
+		var currentTouchY;
+		var currentTouchX;
+		var lastTouchY;
+		var deltaY;
+
+		var initialTouchTime;
+		var currentTouchTime;
+		var lastTouchTime;
+		var deltaTime;
+
+		_addEvent(documentElement, [EVENT_TOUCHSTART, EVENT_TOUCHMOVE, EVENT_TOUCHCANCEL, EVENT_TOUCHEND].join(' '), function(e) {
+			var touch = e.changedTouches[0];
+
+			currentElement = e.target;
+
+			//We don't want text nodes.
+			while(currentElement.nodeType === 3) {
+				currentElement = currentElement.parentNode;
+			}
+
+			currentTouchY = touch.clientY;
+			currentTouchX = touch.clientX;
+			currentTouchTime = e.timeStamp;
+
+			if(!rxTouchIgnoreTags.test(currentElement.tagName)) {
+				e.preventDefault();
+			}
+
+			switch(e.type) {
+				case EVENT_TOUCHSTART:
+					//The last element we tapped on.
+					if(initialElement) {
+						initialElement.blur();
+					}
+
+					_instance.stopAnimateTo();
+
+					initialElement = currentElement;
+
+					initialTouchY = lastTouchY = currentTouchY;
+					initialTouchX = currentTouchX;
+					initialTouchTime = currentTouchTime;
+
+					break;
+				case EVENT_TOUCHMOVE:
+					//Prevent default event on touchIgnore elements in case they don't have focus yet.
+					if(rxTouchIgnoreTags.test(currentElement.tagName) && document.activeElement !== currentElement) {
+						e.preventDefault();
+					}
+
+					deltaY = currentTouchY - lastTouchY;
+					deltaTime = currentTouchTime - lastTouchTime;
+
+					_instance.setScrollTop(_mobileOffset - deltaY, true);
+
+					lastTouchY = currentTouchY;
+					lastTouchTime = currentTouchTime;
+					break;
+				default:
+				case EVENT_TOUCHCANCEL:
+				case EVENT_TOUCHEND:
+					var distanceY = initialTouchY - currentTouchY;
+					var distanceX = initialTouchX - currentTouchX;
+					var distance2 = distanceX * distanceX + distanceY * distanceY;
+
+					//Check if it was more like a tap (moved less than 7px).
+					if(distance2 < 49) {
+						if(!rxTouchIgnoreTags.test(initialElement.tagName)) {
+							initialElement.focus();
+
+							//It was a tap, click the element.
+							var clickEvent = document.createEvent('MouseEvents');
+							clickEvent.initMouseEvent('click', true, true, e.view, 1, touch.screenX, touch.screenY, touch.clientX, touch.clientY, e.ctrlKey, e.altKey, e.shiftKey, e.metaKey, 0, null);
+							initialElement.dispatchEvent(clickEvent);
+						}
+
+						return;
+					}
+
+					initialElement = undefined;
+
+					var speed = deltaY / deltaTime;
+
+					//Cap speed at 3 pixel/ms.
+					speed = Math.max(Math.min(speed, 3), -3);
+
+					var duration = Math.abs(speed / _mobileDeceleration);
+					var targetOffset = speed * duration + 0.5 * _mobileDeceleration * duration * duration;
+					var targetTop = _instance.getScrollTop() - targetOffset;
+
+					//Relative duration change for when scrolling above bounds.
+					var targetRatio = 0;
+
+					//Change duration proportionally when scrolling would leave bounds.
+					if(targetTop > _maxKeyFrame) {
+						targetRatio = (_maxKeyFrame - targetTop) / targetOffset;
+
+						targetTop = _maxKeyFrame;
+					} else if(targetTop < 0) {
+						targetRatio = -targetTop / targetOffset;
+
+						targetTop = 0;
+					}
+
+					duration = duration * (1 - targetRatio);
+
+					_instance.animateTo((targetTop + 0.5) | 0, {easing: 'outCubic', duration: duration});
+					break;
+			}
+		});
+
+		//Just in case there has already been some native scrolling, reset it.
+		window.scrollTo(0, 0);
+		documentElement.style.overflow = body.style.overflow = 'hidden';
+	};
+
+	/**
+	 * Updates key frames which depend on others / need to be updated on resize.
+	 * That is "end" in "absolute" mode and all key frames in "relative" mode.
+	 * Also handles constants, because they may change on resize.
+	 */
+	var _updateDependentKeyFrames = function() {
+		var viewportHeight = documentElement.clientHeight;
+		var processedConstants = _processConstants();
+		var skrollable;
+		var element;
+		var anchorTarget;
+		var keyFrames;
+		var keyFrameIndex;
+		var keyFramesLength;
+		var kf;
+		var skrollableIndex;
+		var skrollablesLength;
+		var offset;
+		var constantValue;
+
+		//First process all relative-mode elements and find the max key frame.
+		skrollableIndex = 0;
+		skrollablesLength = _skrollables.length;
+
+		for(; skrollableIndex < skrollablesLength; skrollableIndex++) {
+			skrollable = _skrollables[skrollableIndex];
+			element = skrollable.element;
+			anchorTarget = skrollable.anchorTarget;
+			keyFrames = skrollable.keyFrames;
+
+			keyFrameIndex = 0;
+			keyFramesLength = keyFrames.length;
+
+			for(; keyFrameIndex < keyFramesLength; keyFrameIndex++) {
+				kf = keyFrames[keyFrameIndex];
+
+				offset = kf.offset;
+				constantValue = processedConstants[kf.constant] || 0;
+
+				kf.frame = offset;
+
+				if(kf.isPercentage) {
+					//Convert the offset to percentage of the viewport height.
+					offset = offset * viewportHeight;
+
+					//Absolute + percentage mode.
+					kf.frame = offset;
+				}
+
+				if(kf.mode === 'relative') {
+					_reset(element);
+
+					kf.frame = _instance.relativeToAbsolute(anchorTarget, kf.anchors[0], kf.anchors[1]) - offset;
+
+					_reset(element, true);
+				}
+
+				kf.frame += constantValue;
+
+				//Only search for max key frame when forceHeight is enabled.
+				if(_forceHeight) {
+					//Find the max key frame, but don't use one of the data-end ones for comparison.
+					if(!kf.isEnd && kf.frame > _maxKeyFrame) {
+						_maxKeyFrame = kf.frame;
+					}
+				}
+			}
+		}
+
+		//#133: The document can be larger than the maxKeyFrame we found.
+		_maxKeyFrame = Math.max(_maxKeyFrame, _getDocumentHeight());
+
+		//Now process all data-end keyframes.
+		skrollableIndex = 0;
+		skrollablesLength = _skrollables.length;
+
+		for(; skrollableIndex < skrollablesLength; skrollableIndex++) {
+			skrollable = _skrollables[skrollableIndex];
+			keyFrames = skrollable.keyFrames;
+
+			keyFrameIndex = 0;
+			keyFramesLength = keyFrames.length;
+
+			for(; keyFrameIndex < keyFramesLength; keyFrameIndex++) {
+				kf = keyFrames[keyFrameIndex];
+
+				constantValue = processedConstants[kf.constant] || 0;
+
+				if(kf.isEnd) {
+					kf.frame = _maxKeyFrame - kf.offset + constantValue;
+				}
+			}
+
+			skrollable.keyFrames.sort(_keyFrameComparator);
+		}
+	};
+
+	/**
+	 * Calculates and sets the style properties for the element at the given frame.
+	 * @param fakeFrame The frame to render at when smooth scrolling is enabled.
+	 * @param actualFrame The actual frame we are at.
+	 */
+	var _calcSteps = function(fakeFrame, actualFrame) {
+		//Iterate over all skrollables.
+		var skrollableIndex = 0;
+		var skrollablesLength = _skrollables.length;
+
+		for(; skrollableIndex < skrollablesLength; skrollableIndex++) {
+			var skrollable = _skrollables[skrollableIndex];
+			var element = skrollable.element;
+			var frame = skrollable.smoothScrolling ? fakeFrame : actualFrame;
+			var frames = skrollable.keyFrames;
+			var framesLength = frames.length;
+			var firstFrame = frames[0];
+			var lastFrame = frames[frames.length - 1];
+			var beforeFirst = frame < firstFrame.frame;
+			var afterLast = frame > lastFrame.frame;
+			var firstOrLastFrame = beforeFirst ? firstFrame : lastFrame;
+			var emitEvents = skrollable.emitEvents;
+			var lastFrameIndex = skrollable.lastFrameIndex;
+			var key;
+			var value;
+
+			//If we are before/after the first/last frame, set the styles according to the given edge strategy.
+			if(beforeFirst || afterLast) {
+				//Check if we already handled this edge case last time.
+				//Note: using setScrollTop it's possible that we jumped from one edge to the other.
+				if(beforeFirst && skrollable.edge === -1 || afterLast && skrollable.edge === 1) {
+					continue;
+				}
+
+				//Add the skrollr-before or -after class.
+				if(beforeFirst) {
+					_updateClass(element, [SKROLLABLE_BEFORE_CLASS], [SKROLLABLE_AFTER_CLASS, SKROLLABLE_BETWEEN_CLASS]);
+
+					//This handles the special case where we exit the first keyframe.
+					if(emitEvents && lastFrameIndex > -1) {
+						_emitEvent(element, firstFrame.eventType, _direction);
+						skrollable.lastFrameIndex = -1;
+					}
+				} else {
+					_updateClass(element, [SKROLLABLE_AFTER_CLASS], [SKROLLABLE_BEFORE_CLASS, SKROLLABLE_BETWEEN_CLASS]);
+
+					//This handles the special case where we exit the last keyframe.
+					if(emitEvents && lastFrameIndex < framesLength) {
+						_emitEvent(element, lastFrame.eventType, _direction);
+						skrollable.lastFrameIndex = framesLength;
+					}
+				}
+
+				//Remember that we handled the edge case (before/after the first/last keyframe).
+				skrollable.edge = beforeFirst ? -1 : 1;
+
+				switch(skrollable.edgeStrategy) {
+					case 'reset':
+						_reset(element);
+						continue;
+					case 'ease':
+						//Handle this case like it would be exactly at first/last keyframe and just pass it on.
+						frame = firstOrLastFrame.frame;
+						break;
+					default:
+					case 'set':
+						var props = firstOrLastFrame.props;
+
+						for(key in props) {
+							if(hasProp.call(props, key)) {
+								value = _interpolateString(props[key].value);
+
+								//Set style or attribute.
+								if(key.indexOf('@') === 0) {
+									element.setAttribute(key.substr(1), value);
+								} else {
+									skrollr.setStyle(element, key, value);
+								}
+							}
+						}
+
+						continue;
+				}
+			} else {
+				//Did we handle an edge last time?
+				if(skrollable.edge !== 0) {
+					_updateClass(element, [SKROLLABLE_CLASS, SKROLLABLE_BETWEEN_CLASS], [SKROLLABLE_BEFORE_CLASS, SKROLLABLE_AFTER_CLASS]);
+					skrollable.edge = 0;
+				}
+			}
+
+			//Find out between which two key frames we are right now.
+			var keyFrameIndex = 0;
+
+			for(; keyFrameIndex < framesLength - 1; keyFrameIndex++) {
+				if(frame >= frames[keyFrameIndex].frame && frame <= frames[keyFrameIndex + 1].frame) {
+					var left = frames[keyFrameIndex];
+					var right = frames[keyFrameIndex + 1];
+
+					for(key in left.props) {
+						if(hasProp.call(left.props, key)) {
+							var progress = (frame - left.frame) / (right.frame - left.frame);
+
+							//Transform the current progress using the given easing function.
+							progress = left.props[key].easing(progress);
+
+							//Interpolate between the two values
+							value = _calcInterpolation(left.props[key].value, right.props[key].value, progress);
+
+							value = _interpolateString(value);
+
+							//Set style or attribute.
+							if(key.indexOf('@') === 0) {
+								element.setAttribute(key.substr(1), value);
+							} else {
+								skrollr.setStyle(element, key, value);
+							}
+						}
+					}
+
+					//Are events enabled on this element?
+					//This code handles the usual cases of scrolling through different keyframes.
+					//The special cases of before first and after last keyframe are handled above.
+					if(emitEvents) {
+						//Did we pass a new keyframe?
+						if(lastFrameIndex !== keyFrameIndex) {
+							if(_direction === 'down') {
+								_emitEvent(element, left.eventType, _direction);
+							} else {
+								_emitEvent(element, right.eventType, _direction);
+							}
+
+							skrollable.lastFrameIndex = keyFrameIndex;
+						}
+					}
+
+					break;
+				}
+			}
+		}
+	};
+
+	/**
+	 * Renders all elements.
+	 */
+	var _render = function() {
+		if(_requestReflow) {
+			_requestReflow = false;
+			_reflow();
+		}
+
+		//We may render something else than the actual scrollbar position.
+		var renderTop = _instance.getScrollTop();
+
+		//If there's an animation, which ends in current render call, call the callback after rendering.
+		var afterAnimationCallback;
+		var now = _now();
+		var progress;
+
+		//Before actually rendering handle the scroll animation, if any.
+		if(_scrollAnimation) {
+			//It's over
+			if(now >= _scrollAnimation.endTime) {
+				renderTop = _scrollAnimation.targetTop;
+				afterAnimationCallback = _scrollAnimation.done;
+				_scrollAnimation = undefined;
+			} else {
+				//Map the current progress to the new progress using given easing function.
+				progress = _scrollAnimation.easing((now - _scrollAnimation.startTime) / _scrollAnimation.duration);
+
+				renderTop = (_scrollAnimation.startTop + progress * _scrollAnimation.topDiff) | 0;
+			}
+
+			_instance.setScrollTop(renderTop, true);
+		}
+		//Smooth scrolling only if there's no animation running and if we're not forcing the rendering.
+		else if(!_forceRender) {
+			var smoothScrollingDiff = _smoothScrolling.targetTop - renderTop;
+
+			//The user scrolled, start new smooth scrolling.
+			if(smoothScrollingDiff) {
+				_smoothScrolling = {
+					startTop: _lastTop,
+					topDiff: renderTop - _lastTop,
+					targetTop: renderTop,
+					startTime: _lastRenderCall,
+					endTime: _lastRenderCall + _smoothScrollingDuration
+				};
+			}
+
+			//Interpolate the internal scroll position (not the actual scrollbar).
+			if(now <= _smoothScrolling.endTime) {
+				//Map the current progress to the new progress using easing function.
+				progress = easings.sqrt((now - _smoothScrolling.startTime) / _smoothScrollingDuration);
+
+				renderTop = (_smoothScrolling.startTop + progress * _smoothScrolling.topDiff) | 0;
+			}
+		}
+
+		//That's were we actually "scroll" on mobile.
+		if(_isMobile && _skrollrBody) {
+			//Set the transform ("scroll it").
+			skrollr.setStyle(_skrollrBody, 'transform', 'translate(0, ' + -(_mobileOffset) + 'px) ' + _translateZ);
+		}
+
+		//Did the scroll position even change?
+		if(_forceRender || _lastTop !== renderTop) {
+			//Remember in which direction are we scrolling?
+			_direction = (renderTop > _lastTop) ? 'down' : (renderTop < _lastTop ? 'up' : _direction);
+
+			_forceRender = false;
+
+			var listenerParams = {
+				curTop: renderTop,
+				lastTop: _lastTop,
+				maxTop: _maxKeyFrame,
+				direction: _direction
+			};
+
+			//Tell the listener we are about to render.
+			var continueRendering = _listeners.beforerender && _listeners.beforerender.call(_instance, listenerParams);
+
+			//The beforerender listener function is able the cancel rendering.
+			if(continueRendering !== false) {
+				//Now actually interpolate all the styles.
+				_calcSteps(renderTop, _instance.getScrollTop());
+
+				//Remember when we last rendered.
+				_lastTop = renderTop;
+
+				if(_listeners.render) {
+					_listeners.render.call(_instance, listenerParams);
+				}
+			}
+
+			if(afterAnimationCallback) {
+				afterAnimationCallback.call(_instance, false);
+			}
+		}
+
+		_lastRenderCall = now;
+	};
+
+	/**
+	 * Parses the properties for each key frame of the given skrollable.
+	 */
+	var _parseProps = function(skrollable) {
+		//Iterate over all key frames
+		var keyFrameIndex = 0;
+		var keyFramesLength = skrollable.keyFrames.length;
+
+		for(; keyFrameIndex < keyFramesLength; keyFrameIndex++) {
+			var frame = skrollable.keyFrames[keyFrameIndex];
+			var easing;
+			var value;
+			var prop;
+			var props = {};
+
+			var match;
+
+			while((match = rxPropValue.exec(frame.props)) !== null) {
+				prop = match[1];
+				value = match[2];
+
+				easing = prop.match(rxPropEasing);
+
+				//Is there an easing specified for this prop?
+				if(easing !== null) {
+					prop = easing[1];
+					easing = easing[2];
+				} else {
+					easing = DEFAULT_EASING;
+				}
+
+				//Exclamation point at first position forces the value to be taken literal.
+				value = value.indexOf('!') ? _parseProp(value) : [value.slice(1)];
+
+				//Save the prop for this key frame with his value and easing function
+				props[prop] = {
+					value: value,
+					easing: easings[easing]
+				};
+			}
+
+			frame.props = props;
+		}
+	};
+
+	/**
+	 * Parses a value extracting numeric values and generating a format string
+	 * for later interpolation of the new values in old string.
+	 *
+	 * @param val The CSS value to be parsed.
+	 * @return Something like ["rgba(?%,?%, ?%,?)", 100, 50, 0, .7]
+	 * where the first element is the format string later used
+	 * and all following elements are the numeric value.
+	 */
+	var _parseProp = function(val) {
+		var numbers = [];
+
+		//One special case, where floats don't work.
+		//We replace all occurences of rgba colors
+		//which don't use percentage notation with the percentage notation.
+		rxRGBAIntegerColor.lastIndex = 0;
+		val = val.replace(rxRGBAIntegerColor, function(rgba) {
+			return rgba.replace(rxNumericValue, function(n) {
+				return n / 255 * 100 + '%';
+			});
+		});
+
+		//Handle prefixing of "gradient" values.
+		//For now only the prefixed value will be set. Unprefixed isn't supported anyway.
+		if(theDashedCSSPrefix) {
+			rxGradient.lastIndex = 0;
+			val = val.replace(rxGradient, function(s) {
+				return theDashedCSSPrefix + s;
+			});
+		}
+
+		//Now parse ANY number inside this string and create a format string.
+		val = val.replace(rxNumericValue, function(n) {
+			numbers.push(+n);
+			return '{?}';
+		});
+
+		//Add the formatstring as first value.
+		numbers.unshift(val);
+
+		return numbers;
+	};
+
+	/**
+	 * Fills the key frames with missing left and right hand properties.
+	 * If key frame 1 has property X and key frame 2 is missing X,
+	 * but key frame 3 has X again, then we need to assign X to key frame 2 too.
+	 *
+	 * @param sk A skrollable.
+	 */
+	var _fillProps = function(sk) {
+		//Will collect the properties key frame by key frame
+		var propList = {};
+		var keyFrameIndex;
+		var keyFramesLength;
+
+		//Iterate over all key frames from left to right
+		keyFrameIndex = 0;
+		keyFramesLength = sk.keyFrames.length;
+
+		for(; keyFrameIndex < keyFramesLength; keyFrameIndex++) {
+			_fillPropForFrame(sk.keyFrames[keyFrameIndex], propList);
+		}
+
+		//Now do the same from right to fill the last gaps
+
+		propList = {};
+
+		//Iterate over all key frames from right to left
+		keyFrameIndex = sk.keyFrames.length - 1;
+
+		for(; keyFrameIndex >= 0; keyFrameIndex--) {
+			_fillPropForFrame(sk.keyFrames[keyFrameIndex], propList);
+		}
+	};
+
+	var _fillPropForFrame = function(frame, propList) {
+		var key;
+
+		//For each key frame iterate over all right hand properties and assign them,
+		//but only if the current key frame doesn't have the property by itself
+		for(key in propList) {
+			//The current frame misses this property, so assign it.
+			if(!hasProp.call(frame.props, key)) {
+				frame.props[key] = propList[key];
+			}
+		}
+
+		//Iterate over all props of the current frame and collect them
+		for(key in frame.props) {
+			propList[key] = frame.props[key];
+		}
+	};
+
+	/**
+	 * Calculates the new values for two given values array.
+	 */
+	var _calcInterpolation = function(val1, val2, progress) {
+		var valueIndex;
+		var val1Length = val1.length;
+
+		//They both need to have the same length
+		if(val1Length !== val2.length) {
+			throw 'Can\'t interpolate between "' + val1[0] + '" and "' + val2[0] + '"';
+		}
+
+		//Add the format string as first element.
+		var interpolated = [val1[0]];
+
+		valueIndex = 1;
+
+		for(; valueIndex < val1Length; valueIndex++) {
+			//That's the line where the two numbers are actually interpolated.
+			interpolated[valueIndex] = val1[valueIndex] + ((val2[valueIndex] - val1[valueIndex]) * progress);
+		}
+
+		return interpolated;
+	};
+
+	/**
+	 * Interpolates the numeric values into the format string.
+	 */
+	var _interpolateString = function(val) {
+		var valueIndex = 1;
+
+		rxInterpolateString.lastIndex = 0;
+
+		return val[0].replace(rxInterpolateString, function() {
+			return val[valueIndex++];
+		});
+	};
+
+	/**
+	 * Resets the class and style attribute to what it was before skrollr manipulated the element.
+	 * Also remembers the values it had before reseting, in order to undo the reset.
+	 */
+	var _reset = function(elements, undo) {
+		//We accept a single element or an array of elements.
+		elements = [].concat(elements);
+
+		var skrollable;
+		var element;
+		var elementsIndex = 0;
+		var elementsLength = elements.length;
+
+		for(; elementsIndex < elementsLength; elementsIndex++) {
+			element = elements[elementsIndex];
+			skrollable = _skrollables[element[SKROLLABLE_ID_DOM_PROPERTY]];
+
+			//Couldn't find the skrollable for this DOM element.
+			if(!skrollable) {
+				continue;
+			}
+
+			if(undo) {
+				//Reset class and style to the "dirty" (set by skrollr) values.
+				element.style.cssText = skrollable.dirtyStyleAttr;
+				_updateClass(element, skrollable.dirtyClassAttr);
+			} else {
+				//Remember the "dirty" (set by skrollr) class and style.
+				skrollable.dirtyStyleAttr = element.style.cssText;
+				skrollable.dirtyClassAttr = _getClass(element);
+
+				//Reset class and style to what it originally was.
+				element.style.cssText = skrollable.styleAttr;
+				_updateClass(element, skrollable.classAttr);
+			}
+		}
+	};
+
+	/**
+	 * Detects support for 3d transforms by applying it to the skrollr-body.
+	 */
+	var _detect3DTransforms = function() {
+		_translateZ = 'translateZ(0)';
+		skrollr.setStyle(_skrollrBody, 'transform', _translateZ);
+
+		var computedStyle = getStyle(_skrollrBody);
+		var computedTransform = computedStyle.getPropertyValue('transform');
+		var computedTransformWithPrefix = computedStyle.getPropertyValue(theDashedCSSPrefix + 'transform');
+		var has3D = (computedTransform && computedTransform !== 'none') || (computedTransformWithPrefix && computedTransformWithPrefix !== 'none');
+
+		if(!has3D) {
+			_translateZ = '';
+		}
+	};
+
+	/**
+	 * Set the CSS property on the given element. Sets prefixed properties as well.
+	 */
+	skrollr.setStyle = function(el, prop, val) {
+		var style = el.style;
+
+		//Camel case.
+		prop = prop.replace(rxCamelCase, rxCamelCaseFn).replace('-', '');
+
+		//Make sure z-index gets a <integer>.
+		//This is the only <integer> case we need to handle.
+		if(prop === 'zIndex') {
+			if(isNaN(val)) {
+				//If it's not a number, don't touch it.
+				//It could for example be "auto" (#351).
+				style[prop] = val;
+			} else {
+				//Floor the number.
+				style[prop] = '' + (val | 0);
+			}
+		}
+		//#64: "float" can't be set across browsers. Needs to use "cssFloat" for all except IE.
+		else if(prop === 'float') {
+			style.styleFloat = style.cssFloat = val;
+		}
+		else {
+			//Need try-catch for old IE.
+			try {
+				//Set prefixed property if there's a prefix.
+				if(theCSSPrefix) {
+					style[theCSSPrefix + prop.slice(0,1).toUpperCase() + prop.slice(1)] = val;
+				}
+
+				//Set unprefixed.
+				style[prop] = val;
+			} catch(ignore) {}
+		}
+	};
+
+	/**
+	 * Cross browser event handling.
+	 */
+	var _addEvent = skrollr.addEvent = function(element, names, callback) {
+		var intermediate = function(e) {
+			//Normalize IE event stuff.
+			e = e || window.event;
+
+			if(!e.target) {
+				e.target = e.srcElement;
+			}
+
+			if(!e.preventDefault) {
+				e.preventDefault = function() {
+					e.returnValue = false;
+					e.defaultPrevented = true;
+				};
+			}
+
+			return callback.call(this, e);
+		};
+
+		names = names.split(' ');
+
+		var name;
+		var nameCounter = 0;
+		var namesLength = names.length;
+
+		for(; nameCounter < namesLength; nameCounter++) {
+			name = names[nameCounter];
+
+			if(element.addEventListener) {
+				element.addEventListener(name, callback, false);
+			} else {
+				element.attachEvent('on' + name, intermediate);
+			}
+
+			//Remember the events to be able to flush them later.
+			_registeredEvents.push({
+				element: element,
+				name: name,
+				listener: callback
+			});
+		}
+	};
+
+	var _removeEvent = skrollr.removeEvent = function(element, names, callback) {
+		names = names.split(' ');
+
+		var nameCounter = 0;
+		var namesLength = names.length;
+
+		for(; nameCounter < namesLength; nameCounter++) {
+			if(element.removeEventListener) {
+				element.removeEventListener(names[nameCounter], callback, false);
+			} else {
+				element.detachEvent('on' + names[nameCounter], callback);
+			}
+		}
+	};
+
+	var _removeAllEvents = function() {
+		var eventData;
+		var eventCounter = 0;
+		var eventsLength = _registeredEvents.length;
+
+		for(; eventCounter < eventsLength; eventCounter++) {
+			eventData = _registeredEvents[eventCounter];
+
+			_removeEvent(eventData.element, eventData.name, eventData.listener);
+		}
+
+		_registeredEvents = [];
+	};
+
+	var _emitEvent = function(element, name, direction) {
+		if(_listeners.keyframe) {
+			_listeners.keyframe.call(_instance, element, name, direction);
+		}
+	};
+
+	var _reflow = function() {
+		var pos = _instance.getScrollTop();
+
+		//Will be recalculated by _updateDependentKeyFrames.
+		_maxKeyFrame = 0;
+
+		if(_forceHeight && !_isMobile) {
+			//un-"force" the height to not mess with the calculations in _updateDependentKeyFrames (#216).
+			body.style.height = '';
+		}
+
+		_updateDependentKeyFrames();
+
+		if(_forceHeight && !_isMobile) {
+			//"force" the height.
+			body.style.height = (_maxKeyFrame + documentElement.clientHeight) + 'px';
+		}
+
+		//The scroll offset may now be larger than needed (on desktop the browser/os prevents scrolling farther than the bottom).
+		if(_isMobile) {
+			_instance.setScrollTop(Math.min(_instance.getScrollTop(), _maxKeyFrame));
+		} else {
+			//Remember and reset the scroll pos (#217).
+			_instance.setScrollTop(pos, true);
+		}
+
+		_forceRender = true;
+	};
+
+	/*
+	 * Returns a copy of the constants object where all functions and strings have been evaluated.
+	 */
+	var _processConstants = function() {
+		var viewportHeight = documentElement.clientHeight;
+		var copy = {};
+		var prop;
+		var value;
+
+		for(prop in _constants) {
+			value = _constants[prop];
+
+			if(typeof value === 'function') {
+				value = value.call(_instance);
+			}
+			//Percentage offset.
+			else if((/p$/).test(value)) {
+				value = (value.slice(0, -1) / 100) * viewportHeight;
+			}
+
+			copy[prop] = value;
+		}
+
+		return copy;
+	};
+
+	/*
+	 * Returns the height of the document.
+	 */
+	var _getDocumentHeight = function() {
+		var skrollrBodyHeight = (_skrollrBody && _skrollrBody.offsetHeight || 0);
+		var bodyHeight = Math.max(skrollrBodyHeight, body.scrollHeight, body.offsetHeight, documentElement.scrollHeight, documentElement.offsetHeight, documentElement.clientHeight);
+
+		return bodyHeight - documentElement.clientHeight;
+	};
+
+	/**
+	 * Returns a string of space separated classnames for the current element.
+	 * Works with SVG as well.
+	 */
+	var _getClass = function(element) {
+		var prop = 'className';
+
+		//SVG support by using className.baseVal instead of just className.
+		if(window.SVGElement && element instanceof window.SVGElement) {
+			element = element[prop];
+			prop = 'baseVal';
+		}
+
+		return element[prop];
+	};
+
+	/**
+	 * Adds and removes a CSS classes.
+	 * Works with SVG as well.
+	 * add and remove are arrays of strings,
+	 * or if remove is ommited add is a string and overwrites all classes.
+	 */
+	var _updateClass = function(element, add, remove) {
+		var prop = 'className';
+
+		//SVG support by using className.baseVal instead of just className.
+		if(window.SVGElement && element instanceof window.SVGElement) {
+			element = element[prop];
+			prop = 'baseVal';
+		}
+
+		//When remove is ommited, we want to overwrite/set the classes.
+		if(remove === undefined) {
+			element[prop] = add;
+			return;
+		}
+
+		//Cache current classes. We will work on a string before passing back to DOM.
+		var val = element[prop];
+
+		//All classes to be removed.
+		var classRemoveIndex = 0;
+		var removeLength = remove.length;
+
+		for(; classRemoveIndex < removeLength; classRemoveIndex++) {
+			val = _untrim(val).replace(_untrim(remove[classRemoveIndex]), ' ');
+		}
+
+		val = _trim(val);
+
+		//All classes to be added.
+		var classAddIndex = 0;
+		var addLength = add.length;
+
+		for(; classAddIndex < addLength; classAddIndex++) {
+			//Only add if el not already has class.
+			if(_untrim(val).indexOf(_untrim(add[classAddIndex])) === -1) {
+				val += ' ' + add[classAddIndex];
+			}
+		}
+
+		element[prop] = _trim(val);
+	};
+
+	var _trim = function(a) {
+		return a.replace(rxTrim, '');
+	};
+
+	/**
+	 * Adds a space before and after the string.
+	 */
+	var _untrim = function(a) {
+		return ' ' + a + ' ';
+	};
+
+	var _now = Date.now || function() {
+		return +new Date();
+	};
+
+	var _keyFrameComparator = function(a, b) {
+		return a.frame - b.frame;
+	};
+
+	/*
+	 * Private variables.
+	 */
+
+	//Singleton
+	var _instance;
+
+	/*
+		A list of all elements which should be animated associated with their the metadata.
+		Exmaple skrollable with two key frames animating from 100px width to 20px:
+
+		skrollable = {
+			element: <the DOM element>,
+			styleAttr: <style attribute of the element before skrollr>,
+			classAttr: <class attribute of the element before skrollr>,
+			keyFrames: [
+				{
+					frame: 100,
+					props: {
+						width: {
+							value: ['{?}px', 100],
+							easing: <reference to easing function>
+						}
+					},
+					mode: "absolute"
+				},
+				{
+					frame: 200,
+					props: {
+						width: {
+							value: ['{?}px', 20],
+							easing: <reference to easing function>
+						}
+					},
+					mode: "absolute"
+				}
+			]
+		};
+	*/
+	var _skrollables;
+
+	var _skrollrBody;
+
+	var _listeners;
+	var _forceHeight;
+	var _maxKeyFrame = 0;
+
+	var _scale = 1;
+	var _constants;
+
+	var _mobileDeceleration;
+
+	//Current direction (up/down).
+	var _direction = 'down';
+
+	//The last top offset value. Needed to determine direction.
+	var _lastTop = -1;
+
+	//The last time we called the render method (doesn't mean we rendered!).
+	var _lastRenderCall = _now();
+
+	//For detecting if it actually resized (#271).
+	var _lastViewportWidth = 0;
+	var _lastViewportHeight = 0;
+
+	var _requestReflow = false;
+
+	//Will contain data about a running scrollbar animation, if any.
+	var _scrollAnimation;
+
+	var _smoothScrollingEnabled;
+
+	var _smoothScrollingDuration;
+
+	//Will contain settins for smooth scrolling if enabled.
+	var _smoothScrolling;
+
+	//Can be set by any operation/event to force rendering even if the scrollbar didn't move.
+	var _forceRender;
+
+	//Each skrollable gets an unique ID incremented for each skrollable.
+	//The ID is the index in the _skrollables array.
+	var _skrollableIdCounter = 0;
+
+	var _edgeStrategy;
+
+
+	//Mobile specific vars. Will be stripped by UglifyJS when not in use.
+	var _isMobile = false;
+
+	//The virtual scroll offset when using mobile scrolling.
+	var _mobileOffset = 0;
+
+	//If the browser supports 3d transforms, this will be filled with 'translateZ(0)' (empty string otherwise).
+	var _translateZ;
+
+	//Will contain data about registered events by skrollr.
+	var _registeredEvents = [];
+
+	//Animation frame id returned by RequestAnimationFrame (or timeout when RAF is not supported).
+	var _animFrame;
+
+	//Expose skrollr as either a global variable or a require.js module.
+	if(typeof define === 'function' && define.amd) {
+		define([], function () {
+			return skrollr;
+		});
+	} else if (typeof module !== 'undefined' && module.exports) {
+		module.exports = skrollr;
+	} else {
+		window.skrollr = skrollr;
+	}
+
+}(window, document));
+
+
+	</script>
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false
+	});
+	</script>
+</body>
+
+</html>
